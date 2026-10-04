@@ -1,0 +1,2359 @@
+{
+  "about": {
+    "what": "The WMO cloud classification as CloudSim uses it: genera, species, varieties, supplementary features, accessory, mother and special clouds, their abbreviations and associations, the levels, the CL/CM/CH code figures, the angular criteria, the optical phenomena and how similar clouds are told apart.",
+    "facts": "The classification itself - names, abbreviations, which forms go with which genus, levels, code meanings, angles - follows the WMO International Cloud Atlas (online edition, cloudatlas.wmo.int); the pages are listed in 'sources'.",
+    "wording": "Every definition, description, rule and note is written in CloudSim's own words (rewritten 4 Oct 2026); apart from bare cloud names, none repeats the Atlas's text. The facts are the Atlas's, as transcribed in September 2026; the forms (species, varieties, supplementary features, accessory and special clouds), the clouds above the weather and the halo arcs were also checked against the freely licensed pages in 'references' (Wikipedia, CC BY-SA 4.0). No text was taken from those pages either.",
+    "licence": "GPL-3.0-or-later, with the rest of CloudSim (see LICENSE). Copyright (C) 2026 The CloudSim authors."
+  },
+  "references": [
+    "https://en.wikipedia.org/wiki/List_of_cloud_types",
+    "https://en.wikipedia.org/wiki/Halo_(optical_phenomenon)",
+    "https://en.wikipedia.org/wiki/Circumzenithal_arc",
+    "https://en.wikipedia.org/wiki/Circumhorizontal_arc",
+    "https://en.wikipedia.org/wiki/Polar_stratospheric_cloud",
+    "https://en.wikipedia.org/wiki/Noctilucent_cloud"
+  ],
+  "sources": [
+    "https://cloudatlas.wmo.int/en/home.html",
+    "https://cloudatlas.wmo.int/en/sitemap.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification-genera.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification-species.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification-mother-clouds.html",
+    "https://cloudatlas.wmo.int/en/cloud-classification-summary.html",
+    "https://cloudatlas.wmo.int/en/clouds-definitions.html",
+    "https://cloudatlas.wmo.int/en/definitions-of-clouds.html",
+    "https://cloudatlas.wmo.int/en/some-useful-concepts-levels.html",
+    "https://cloudatlas.wmo.int/en/abbr-and-symbols-of-clouds-table-genera-species.html",
+    "https://cloudatlas.wmo.int/en/abbr-and-symbols-of-clouds-table-varieties-supp-acc.html",
+    "https://cloudatlas.wmo.int/en/abbr-and-symbols-of-clouds-table-mother-special.html",
+    "https://cloudatlas.wmo.int/en/clouds-species.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory.html",
+    "https://cloudatlas.wmo.int/en/clouds-special.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-and-genera-most-frequently-occur-table.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-and-genera-most-frequently-occur-table.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-and-genera-most-frequently-occur-table.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory-and-genera-most-frequently-occur-table.html",
+    "https://cloudatlas.wmo.int/en/upper-atmospheric-clouds.html",
+    "https://cloudatlas.wmo.int/en/nacreous-clouds.html",
+    "https://cloudatlas.wmo.int/en/nitric-acid-and-water-polar-stratospheric-clouds.html",
+    "https://cloudatlas.wmo.int/en/noctilucent-clouds.html",
+    "https://cloudatlas.wmo.int/en/coding-instructions-of-clouds-in-the-codes-cl-cm-ch.html",
+    "https://cloudatlas.wmo.int/en/code-specifications-and-coding-procedures.html",
+    "https://cloudatlas.wmo.int/en/cloud-classification-aids-cl-cm-ch.html",
+    "https://cloudatlas.wmo.int/en/cloud-symbols-corresponding-to-codes-cl-cm-ch.html",
+    "https://cloudatlas.wmo.int/en/cl-clouds-of-genera.html",
+    "https://cloudatlas.wmo.int/en/cm-clouds-of-genera.html",
+    "https://cloudatlas.wmo.int/en/ch-clouds-of-genera.html",
+    "https://cloudatlas.wmo.int/en/cl-invisible.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-cirrus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-cirrocumulus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-cirrostratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-altocumulus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-altostratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-nimbostratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-stratocumulus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-stratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-cumulus.html",
+    "https://cloudatlas.wmo.int/en/clouds-genera-cumulonimbus.html",
+    "https://cloudatlas.wmo.int/en/stratocumulus-sc.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-fibratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-uncinus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-spissatus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-castellanus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-floccus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-stratiformis.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-nebulosus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-lenticularis.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-volutus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-fractus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-humilis.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-mediocris.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-congestus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-calvus.html",
+    "https://cloudatlas.wmo.int/en/clouds-species-capillatus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-intortus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-vertebratus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-undulatus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-radiatus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-lacunosus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-duplicatus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-translucidus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-perlucidus.html",
+    "https://cloudatlas.wmo.int/en/clouds-varieties-opacus.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-incus.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-mamma.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-virga.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-praecipitatio.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-arcus.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-tuba.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-asperitas.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-fluctus.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-cavum.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-murus.html",
+    "https://cloudatlas.wmo.int/en/clouds-supplementary-features-cauda.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory-pileus.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory-velum.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory-pannus.html",
+    "https://cloudatlas.wmo.int/en/clouds-accessory-flumen.html",
+    "https://cloudatlas.wmo.int/en/flammagenitus.html",
+    "https://cloudatlas.wmo.int/en/homogenitus.html",
+    "https://cloudatlas.wmo.int/en/homomutatus.html",
+    "https://cloudatlas.wmo.int/en/silvagenitus.html",
+    "https://cloudatlas.wmo.int/en/cataractagenitus.html",
+    "https://cloudatlas.wmo.int/en/aircraft-condensation-trails.html",
+    "https://cloudatlas.wmo.int/en/cl-0.html",
+    "https://cloudatlas.wmo.int/en/cm-0.html",
+    "https://cloudatlas.wmo.int/en/ch-0.html",
+    "https://cloudatlas.wmo.int/en/cl-1.html",
+    "https://cloudatlas.wmo.int/en/cm-1.html",
+    "https://cloudatlas.wmo.int/en/ch-1.html",
+    "https://cloudatlas.wmo.int/en/cl-2.html",
+    "https://cloudatlas.wmo.int/en/cm-2.html",
+    "https://cloudatlas.wmo.int/en/ch-2.html",
+    "https://cloudatlas.wmo.int/en/cl-3.html",
+    "https://cloudatlas.wmo.int/en/cm-3.html",
+    "https://cloudatlas.wmo.int/en/ch-3.html",
+    "https://cloudatlas.wmo.int/en/cl-4.html",
+    "https://cloudatlas.wmo.int/en/cm-4.html",
+    "https://cloudatlas.wmo.int/en/ch-4.html",
+    "https://cloudatlas.wmo.int/en/cl-5.html",
+    "https://cloudatlas.wmo.int/en/cm-5.html",
+    "https://cloudatlas.wmo.int/en/ch-5.html",
+    "https://cloudatlas.wmo.int/en/cl-6.html",
+    "https://cloudatlas.wmo.int/en/cm-6.html",
+    "https://cloudatlas.wmo.int/en/ch-6.html",
+    "https://cloudatlas.wmo.int/en/cl-7.html",
+    "https://cloudatlas.wmo.int/en/cm-7.html",
+    "https://cloudatlas.wmo.int/en/ch-7.html",
+    "https://cloudatlas.wmo.int/en/cl-8.html",
+    "https://cloudatlas.wmo.int/en/cm-8.html",
+    "https://cloudatlas.wmo.int/en/ch-8.html",
+    "https://cloudatlas.wmo.int/en/cl-9.html",
+    "https://cloudatlas.wmo.int/en/cm-9.html",
+    "https://cloudatlas.wmo.int/en/ch-9.html",
+    "https://cloudatlas.wmo.int/en/photometeors.html",
+    "https://cloudatlas.wmo.int/en/photometeors-other-than-clouds.html",
+    "https://cloudatlas.wmo.int/en/total-cloud-cover-and-cloud-amount.html",
+    "https://cloudatlas.wmo.int/en/identifying-clouds.html",
+    "https://cloudatlas.wmo.int/en/appearance-of-clouds.html",
+    "https://cloudatlas.wmo.int/en/introduction-and-principles-of-cloud-classification.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification-varieties.html",
+    "https://cloudatlas.wmo.int/en/principles-of-cloud-classification-accessory-clouds.html",
+    "https://cloudatlas.wmo.int/en/cloud-abbreviations-and-symbols.html",
+    "https://cloudatlas.wmo.int/en/coding-of-clouds.html",
+    "https://cloudatlas.wmo.int/en/cm-invisible.html",
+    "https://cloudatlas.wmo.int/en/ch-invisible.html",
+    "https://cloudatlas.wmo.int/en/useful-concepts.html",
+    "https://cloudatlas.wmo.int/en/halo-phenomena.html",
+    "https://cloudatlas.wmo.int/en/22-halo.html",
+    "https://cloudatlas.wmo.int/en/46-halo.html",
+    "https://cloudatlas.wmo.int/en/luminous-pillar.html",
+    "https://cloudatlas.wmo.int/en/tangent-arc.html",
+    "https://cloudatlas.wmo.int/en/circumzenithal-arc.html",
+    "https://cloudatlas.wmo.int/en/circumhorizontal-arc.html",
+    "https://cloudatlas.wmo.int/en/parhelic-circle.html",
+    "https://cloudatlas.wmo.int/en/subsun.html",
+    "https://cloudatlas.wmo.int/en/supralateral-arc.html",
+    "https://cloudatlas.wmo.int/en/infralateral-arc.html",
+    "https://cloudatlas.wmo.int/en/other-halo-phenomena.html",
+    "https://cloudatlas.wmo.int/en/corona.html",
+    "https://cloudatlas.wmo.int/en/irisation-or-iridescence.html",
+    "https://cloudatlas.wmo.int/en/glory.html",
+    "https://cloudatlas.wmo.int/en/rainbow.html",
+    "https://cloudatlas.wmo.int/en/bishops-ring.html",
+    "https://cloudatlas.wmo.int/en/explanatory-remarks-cirrocumulus.html",
+    "https://cloudatlas.wmo.int/en/explanatory-remarks-altocumulus.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-cirrus.html",
+    "https://cloudatlas.wmo.int/en/cirrus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-cirrus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-cirrocumulus.html",
+    "https://cloudatlas.wmo.int/en/cirrocumulus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-cirrocumulus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-cirrostratus.html",
+    "https://cloudatlas.wmo.int/en/cirrostratus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-cirrostratus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-altocumulus.html",
+    "https://cloudatlas.wmo.int/en/altocumulus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-altocumulus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-altostratus.html",
+    "https://cloudatlas.wmo.int/en/altostratus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-altostratus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-nimbostratus.html",
+    "https://cloudatlas.wmo.int/en/nimbostratus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-nimbostratus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-stratocumulus.html",
+    "https://cloudatlas.wmo.int/en/stratocumulus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-stratocumulus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-stratus.html",
+    "https://cloudatlas.wmo.int/en/stratus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-stratus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-cumulus.html",
+    "https://cloudatlas.wmo.int/en/cumulus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-cumulus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/physical-constitution-cumulonimbus.html",
+    "https://cloudatlas.wmo.int/en/cumulonimbus-may-form.html",
+    "https://cloudatlas.wmo.int/en/differences-between-cumulonimbus-and-similar-genera.html",
+    "https://cloudatlas.wmo.int/en/ci-compared-with-cc.html",
+    "https://cloudatlas.wmo.int/en/ci-compared-with-cs.html",
+    "https://cloudatlas.wmo.int/en/ci-compared-with-ac.html",
+    "https://cloudatlas.wmo.int/en/ci-compared-with-as.html",
+    "https://cloudatlas.wmo.int/en/cc-compared-with-ci.html",
+    "https://cloudatlas.wmo.int/en/cc-compared-with-cs.html",
+    "https://cloudatlas.wmo.int/en/cc-compared-with-ac.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-ci.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-cc.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-ac.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-as.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-st.html",
+    "https://cloudatlas.wmo.int/en/cs-compared-with-hz.html",
+    "https://cloudatlas.wmo.int/en/ac-compared-with-ci.html",
+    "https://cloudatlas.wmo.int/en/ac-compared-with-cc.html",
+    "https://cloudatlas.wmo.int/en/ac-compared-with-as.html",
+    "https://cloudatlas.wmo.int/en/ac-compared-with-sc.html",
+    "https://cloudatlas.wmo.int/en/acflo-compared-with-cu.html",
+    "https://cloudatlas.wmo.int/en/as-compared-with-ci-spi.html",
+    "https://cloudatlas.wmo.int/en/as-tr-compared-with-cs.html",
+    "https://cloudatlas.wmo.int/en/as-compared-with-ac-sc.html",
+    "https://cloudatlas.wmo.int/en/as-op-compared-with-ns.html",
+    "https://cloudatlas.wmo.int/en/as-tr-compared-with-st.html",
+    "https://cloudatlas.wmo.int/en/as-op-compared-with-st-neb-op.html",
+    "https://cloudatlas.wmo.int/en/ns-compared-with-as-op.html",
+    "https://cloudatlas.wmo.int/en/ns-compared-with-ac-str-op.html",
+    "https://cloudatlas.wmo.int/en/ns-compared-with-sc-str-op.html",
+    "https://cloudatlas.wmo.int/en/ns-compared-with-st-neb-op.html",
+    "https://cloudatlas.wmo.int/en/ns-compared-with-cb.html",
+    "https://cloudatlas.wmo.int/en/sc-compared-with-cs-neb.html",
+    "https://cloudatlas.wmo.int/en/sc-compared-with-ac.html",
+    "https://cloudatlas.wmo.int/en/sc-compared-with-as.html",
+    "https://cloudatlas.wmo.int/en/sc-str-op-compared-with-ns.html",
+    "https://cloudatlas.wmo.int/en/sc-compared-with-st.html",
+    "https://cloudatlas.wmo.int/en/sc-compared-with-cu.html",
+    "https://cloudatlas.wmo.int/en/sc-flo-compared-with-cu-fra-cu-med.html",
+    "https://cloudatlas.wmo.int/en/st-compared-with-ci.html",
+    "https://cloudatlas.wmo.int/en/st-tra-compared-with-cs.html",
+    "https://cloudatlas.wmo.int/en/st-compared-with-as.html",
+    "https://cloudatlas.wmo.int/en/st-neb-op-compared-with-ns.html",
+    "https://cloudatlas.wmo.int/en/st-tra-compared-with-ns.html",
+    "https://cloudatlas.wmo.int/en/st-compared-with-sc.html",
+    "https://cloudatlas.wmo.int/en/st-fra-compared-with-cu-fra.html",
+    "https://cloudatlas.wmo.int/en/cu-compared-with-ac-sc.html",
+    "https://cloudatlas.wmo.int/en/cu-compared-with-as-ns.html",
+    "https://cloudatlas.wmo.int/en/cu-con-compared-with-cb.html",
+    "https://cloudatlas.wmo.int/en/cu-med-fra-compared-with-sc-flo.html",
+    "https://cloudatlas.wmo.int/en/cu-fra-compared-with-st-fra.html"
+  ],
+  "etages": {
+    "polar": {
+      "low": [
+        0,
+        2000
+      ],
+      "middle": [
+        2000,
+        4000
+      ],
+      "high": [
+        3000,
+        8000
+      ]
+    },
+    "temperate": {
+      "low": [
+        0,
+        2000
+      ],
+      "middle": [
+        2000,
+        7000
+      ],
+      "high": [
+        5000,
+        13000
+      ]
+    },
+    "tropical": {
+      "low": [
+        0,
+        2000
+      ],
+      "middle": [
+        2000,
+        8000
+      ],
+      "high": [
+        6000,
+        18000
+      ]
+    }
+  },
+  "genera": [
+    {
+      "name": "Cirrus",
+      "abbr": "Ci",
+      "etage": "high",
+      "definition": "High cloud of separate, delicate white strands, or of white (or nearly all white) patches and narrow bands. What gives it away is the texture: it looks like hair, has a silky sheen, or both.",
+      "species": [
+        "fib",
+        "unc",
+        "spi",
+        "cas",
+        "flo"
+      ],
+      "varieties": [
+        "in",
+        "ve",
+        "ra",
+        "du"
+      ],
+      "supplementary": [
+        "mam",
+        "flu"
+      ],
+      "accessory": []
+    },
+    {
+      "name": "Cirrocumulus",
+      "abbr": "Cc",
+      "etage": "high",
+      "definition": "A high patch, sheet or layer of tiny cloudlets - grains, ripples and the like - joined or apart and set out in a more or less regular pattern. It is thin and white with no shaded parts, and most of its elements look less than 1 degree wide.",
+      "species": [
+        "cas",
+        "flo",
+        "str",
+        "len"
+      ],
+      "varieties": [
+        "un",
+        "la"
+      ],
+      "supplementary": [
+        "mam",
+        "vir",
+        "cav"
+      ],
+      "accessory": []
+    },
+    {
+      "name": "Cirrostratus",
+      "abbr": "Cs",
+      "etage": "high",
+      "definition": "A thin, see-through whitish veil over part or all of the sky, either smooth or with a hair-like grain. Halo phenomena around the Sun or Moon are its usual sign.",
+      "species": [
+        "fib",
+        "neb"
+      ],
+      "varieties": [
+        "un",
+        "du"
+      ],
+      "supplementary": [],
+      "accessory": []
+    },
+    {
+      "name": "Altocumulus",
+      "abbr": "Ac",
+      "etage": "middle",
+      "definition": "A middle-level patch, sheet or layer, white, grey or both, normally with shaded parts. It is built of plates, rounded masses, rolls and similar elements, separate or merged, now and then partly fibrous or diffuse. Where small elements are regularly arranged, most of them usually look 1 to 5 degrees wide.",
+      "species": [
+        "cas",
+        "flo",
+        "str",
+        "len",
+        "vol"
+      ],
+      "varieties": [
+        "un",
+        "ra",
+        "la",
+        "du",
+        "tr",
+        "pe",
+        "op"
+      ],
+      "supplementary": [
+        "mam",
+        "vir",
+        "cav",
+        "flu",
+        "asp"
+      ],
+      "accessory": []
+    },
+    {
+      "name": "Altostratus",
+      "abbr": "As",
+      "etage": "middle",
+      "definition": "A grey or bluish sheet or layer over all or part of the sky, uniform, streaky or fibrous in texture. Somewhere it is thin enough for the Sun to show at least dimly, blurred as if behind frosted glass. It never shows halo phenomena.",
+      "species": [],
+      "varieties": [
+        "un",
+        "ra",
+        "du",
+        "tr",
+        "op"
+      ],
+      "supplementary": [
+        "mam",
+        "vir",
+        "pra"
+      ],
+      "accessory": [
+        "pan"
+      ]
+    },
+    {
+      "name": "Nimbostratus",
+      "abbr": "Ns",
+      "etage": "middle",
+      "definition": "A grey, often dark layer whose outlines are smeared by rain or snow falling from it almost without pause, in most cases all the way to the ground. Everywhere it is thick enough to hide the Sun completely.",
+      "species": [],
+      "varieties": [],
+      "supplementary": [
+        "vir",
+        "pra"
+      ],
+      "accessory": [
+        "pan"
+      ]
+    },
+    {
+      "name": "Stratocumulus",
+      "abbr": "Sc",
+      "etage": "low",
+      "definition": "A low patch, sheet or layer, grey, whitish or both, nearly always with darker parts. Its elements - tiles, rounded masses, rolls and so on - may be separate or merged and are not fibrous (virga aside). Where small elements are regularly arranged, most of them look more than 5 degrees wide.",
+      "species": [
+        "cas",
+        "flo",
+        "str",
+        "len",
+        "vol"
+      ],
+      "varieties": [
+        "un",
+        "ra",
+        "la",
+        "du",
+        "tr",
+        "pe",
+        "op"
+      ],
+      "supplementary": [
+        "mam",
+        "vir",
+        "cav",
+        "flu",
+        "asp",
+        "pra"
+      ],
+      "accessory": []
+    },
+    {
+      "name": "Stratus",
+      "abbr": "St",
+      "etage": "low",
+      "definition": "A low, usually grey layer with a rather even base. Drizzle, snow or snow grains may fall from it. If the Sun shows through, its rim stays sharp. It gives no halo phenomena, except perhaps in very cold conditions.",
+      "species": [
+        "neb",
+        "fra"
+      ],
+      "varieties": [
+        "un",
+        "tr",
+        "op"
+      ],
+      "supplementary": [
+        "flu",
+        "pra"
+      ],
+      "accessory": []
+    },
+    {
+      "name": "Cumulus",
+      "abbr": "Cu",
+      "etage": "low",
+      "definition": "Separate, usually dense clouds with crisp edges that grow upward as mounds, domes or towers; the swelling tops often look like cauliflower. Their sunlit sides are mostly brilliant white and their nearly flat bases comparatively dark. Some Cumulus are ragged.",
+      "species": [
+        "fra",
+        "hum",
+        "med",
+        "con"
+      ],
+      "varieties": [
+        "ra"
+      ],
+      "supplementary": [
+        "vir",
+        "flu",
+        "pra",
+        "arc",
+        "tub"
+      ],
+      "accessory": [
+        "pil",
+        "vel",
+        "pan"
+      ]
+    },
+    {
+      "name": "Cumulonimbus",
+      "abbr": "Cb",
+      "etage": "low",
+      "definition": "A massive, dense cloud of great depth, rising like a mountain or enormous towers. Part of its top is usually smooth, fibrous or streaked and almost always flattened, and it often spreads out as an anvil or a huge plume.",
+      "species": [
+        "cal",
+        "cap"
+      ],
+      "varieties": [],
+      "supplementary": [
+        "inc",
+        "mam",
+        "vir",
+        "pra",
+        "arc",
+        "mur",
+        "tub",
+        "cau"
+      ],
+      "accessory": [
+        "pil",
+        "vel",
+        "pan",
+        "flm"
+      ]
+    }
+  ],
+  "species": [
+    {
+      "name": "fibratus",
+      "abbr": "fib",
+      "definition": "Filaments - almost straight or irregularly bent - forming separate clouds or a thin veil; unlike uncinus, they end without hooks or tufts.",
+      "genera": [
+        "Ci",
+        "Cs"
+      ]
+    },
+    {
+      "name": "uncinus",
+      "abbr": "unc",
+      "definition": "Cirrus with no grey parts, often comma-shaped, whose upper end finishes in a hook or in a tuft that is not a rounded bulge.",
+      "genera": [
+        "Ci"
+      ]
+    },
+    {
+      "name": "spissatus",
+      "abbr": "spi",
+      "definition": "Cirrus patches thick enough to look greyish toward the Sun, able to dim it, blur its edge or hide it. It often starts life as the top of a Cumulonimbus.",
+      "genera": [
+        "Ci"
+      ]
+    },
+    {
+      "name": "castellanus",
+      "abbr": "cas",
+      "definition": "Somewhere along their tops these clouds sprout cumuliform turrets or towers, some taller than wide, standing on a shared base and seeming to line up in rows. The turrets are clearest when the clouds are seen side-on.",
+      "genera": [
+        "Ci",
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "floccus",
+      "abbr": "flo",
+      "definition": "Each cloud is a small cumuliform tuft whose underside is ragged to some degree and often trails virga.",
+      "genera": [
+        "Ci",
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "stratiformis",
+      "abbr": "str",
+      "definition": "Cloud extended horizontally into a wide sheet or layer.",
+      "genera": [
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "nebulosus",
+      "abbr": "neb",
+      "definition": "A hazy, featureless veil or layer in which no distinct detail can be made out.",
+      "genera": [
+        "Cs",
+        "St"
+      ]
+    },
+    {
+      "name": "lenticularis",
+      "abbr": "len",
+      "definition": "Lens- or almond-shaped clouds, often drawn out very long and usually sharp-edged, sometimes iridescent. They are most common in clouds raised by mountains or hills, but can also form over flat country.",
+      "genera": [
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "volutus",
+      "abbr": "vol",
+      "definition": "A separate, elongated tube of cloud lying horizontally, usually low, that often seems to turn slowly about its long axis.",
+      "genera": [
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "fractus",
+      "abbr": "fra",
+      "definition": "Torn, irregular shreds of cloud with an obviously ragged look.",
+      "genera": [
+        "St",
+        "Cu"
+      ]
+    },
+    {
+      "name": "humilis",
+      "abbr": "hum",
+      "definition": "Shallow Cumulus with little depth, typically looking squashed flat.",
+      "genera": [
+        "Cu"
+      ]
+    },
+    {
+      "name": "mediocris",
+      "abbr": "med",
+      "definition": "Cumulus of medium depth whose tops carry small bulges and sprouts.",
+      "genera": [
+        "Cu"
+      ]
+    },
+    {
+      "name": "congestus",
+      "abbr": "con",
+      "definition": "Vigorously growing Cumulus, usually sharp-edged and often very deep, whose swelling tops frequently look like cauliflower.",
+      "genera": [
+        "Cu"
+      ]
+    },
+    {
+      "name": "calvus",
+      "abbr": "cal",
+      "definition": "Cumulonimbus in which at least some of the upper bulges have started to lose their crisp cumuliform edges, though no cirriform parts can yet be made out.",
+      "genera": [
+        "Cb"
+      ]
+    },
+    {
+      "name": "capillatus",
+      "abbr": "cap",
+      "definition": "Cumulonimbus with obvious cirriform parts of fibrous or striated structure, mainly near the top, often shaped as an anvil, a plume or a huge untidy mass of hair-like cloud.",
+      "genera": [
+        "Cb"
+      ]
+    }
+  ],
+  "varieties": [
+    {
+      "name": "intortus",
+      "abbr": "in",
+      "definition": "Cirrus whose filaments bend very irregularly and often look randomly tangled.",
+      "genera": [
+        "Ci"
+      ]
+    },
+    {
+      "name": "vertebratus",
+      "abbr": "ve",
+      "definition": "Elements laid out like a spine with ribs, or like a fish skeleton.",
+      "genera": [
+        "Ci"
+      ]
+    },
+    {
+      "name": "undulatus",
+      "abbr": "un",
+      "definition": "Patches, sheets or layers marked by waves.",
+      "genera": [
+        "Cc",
+        "Cs",
+        "Ac",
+        "As",
+        "Sc",
+        "St"
+      ]
+    },
+    {
+      "name": "radiatus",
+      "abbr": "ra",
+      "definition": "Broad parallel bands, or clouds lined up in parallel bands. Because of perspective the bands appear to converge on one point of the horizon, or on two opposite points (the radiation points) if they cross the whole sky.",
+      "genera": [
+        "Ci",
+        "Ac",
+        "As",
+        "Sc",
+        "Cu"
+      ]
+    },
+    {
+      "name": "lacunosus",
+      "abbr": "la",
+      "definition": "Usually thin patches, sheets or layers pierced by round holes spread fairly evenly, many of them with frayed rims - a net-like look.",
+      "genera": [
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "duplicatus",
+      "abbr": "du",
+      "definition": "Two or more patches, sheets or layers lying at slightly different heights, sometimes partly joined.",
+      "genera": [
+        "Ci",
+        "Cs",
+        "Ac",
+        "As",
+        "Sc"
+      ]
+    },
+    {
+      "name": "translucidus",
+      "abbr": "tr",
+      "definition": "A wide patch, sheet or layer translucent over most of its area, so that the position of the Sun or Moon can be seen through it.",
+      "genera": [
+        "Ac",
+        "As",
+        "Sc",
+        "St"
+      ]
+    },
+    {
+      "name": "perlucidus",
+      "abbr": "pe",
+      "definition": "A wide patch, sheet or layer with clear gaps, sometimes tiny, between its elements, through which the Sun, the Moon, blue sky or higher cloud can be seen. It can occur together with translucidus or opacus.",
+      "genera": [
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "opacus",
+      "abbr": "op",
+      "definition": "A wide patch, sheet or layer dense enough over most of its area to hide the Sun or Moon entirely.",
+      "genera": [
+        "Ac",
+        "As",
+        "Sc",
+        "St"
+      ]
+    }
+  ],
+  "supplementary_features": [
+    {
+      "name": "incus",
+      "abbr": "inc",
+      "definition": "A Cumulonimbus top spread out as an anvil, smooth, fibrous or streaked in texture.",
+      "genera": [
+        "Cb"
+      ]
+    },
+    {
+      "name": "mamma",
+      "abbr": "mam",
+      "definition": "Pouch-like bulges hanging from a cloud's underside, like udders.",
+      "genera": [
+        "Ci",
+        "Cc",
+        "Ac",
+        "As",
+        "Sc",
+        "Cb"
+      ]
+    },
+    {
+      "name": "virga",
+      "abbr": "vir",
+      "definition": "Fallstreaks: trails of precipitation hanging straight down or slanting from a cloud's base and evaporating before they reach the ground.",
+      "genera": [
+        "Cc",
+        "Ac",
+        "As",
+        "Ns",
+        "Sc",
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "cavum",
+      "abbr": "cav",
+      "definition": "A sharply bounded hole, usually round but sometimes a long lane, in a thin layer of supercooled droplets. Virga or wisps of Cirrus usually hang in its middle, and the hole tends to widen as time goes on.",
+      "genera": [
+        "Cc",
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "fluctus",
+      "abbr": "flu",
+      "definition": "Short-lived curling or breaking waves, usually along the cloud's upper surface - the visible form of Kelvin-Helmholtz billows.",
+      "genera": [
+        "Ci",
+        "Ac",
+        "Sc",
+        "St",
+        "Cu"
+      ]
+    },
+    {
+      "name": "asperitas",
+      "abbr": "asp",
+      "definition": "Distinct wave-like forms on a cloud's underside, rougher and less horizontally ordered than the waves of undulatus.",
+      "genera": [
+        "Ac",
+        "Sc"
+      ]
+    },
+    {
+      "name": "praecipitatio",
+      "abbr": "pra",
+      "definition": "Precipitation of any kind - rain, drizzle, snow, ice pellets, hail and so on - falling from the cloud and reaching the ground.",
+      "genera": [
+        "As",
+        "Ns",
+        "Sc",
+        "St",
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "arcus",
+      "abbr": "arc",
+      "definition": "A dense horizontal roll with frayed edges along the lower leading edge of some clouds; a large one looks like a dark, threatening arch.",
+      "genera": [
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "murus",
+      "abbr": "mur",
+      "definition": "A local, lasting and often sudden step down of cloud below the base of a Cumulonimbus (a wall cloud); tuba sometimes descend from it.",
+      "genera": [
+        "Cb"
+      ]
+    },
+    {
+      "name": "tuba",
+      "abbr": "tub",
+      "definition": "A column or upside-down cone of cloud reaching down from a cloud base: the visible part of a vortex of some strength.",
+      "genera": [
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "cauda",
+      "abbr": "cau",
+      "definition": "A low, horizontal, tail-like cloud - not a funnel - stretching from the main rain area of a supercell Cumulonimbus to its murus (wall cloud).",
+      "genera": [
+        "Cb"
+      ]
+    }
+  ],
+  "accessory_clouds": [
+    {
+      "name": "pileus",
+      "abbr": "pil",
+      "definition": "A small cap or hood of cloud just above, or clinging to, the top of a cumuliform cloud, which often pushes up through it.",
+      "genera": [
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "velum",
+      "abbr": "vel",
+      "definition": "A wide veil of cloud lying just above, or attached to, the upper parts of one or more cumuliform clouds, which often break through it.",
+      "genera": [
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "pannus",
+      "abbr": "pan",
+      "definition": "Ragged shreds below another cloud, sometimes joined to it, that can merge into an unbroken layer.",
+      "genera": [
+        "As",
+        "Ns",
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "flumen",
+      "abbr": "flm",
+      "definition": "Bands of low cloud that feed a supercell Cumulonimbus: they lie along the low-level wind and move into or toward the storm.",
+      "genera": [
+        "Cb"
+      ]
+    }
+  ],
+  "special_clouds": [
+    {
+      "name": "flammagenitus",
+      "abbr": "flgen",
+      "definition": "Clouds plainly seen to have been produced by a local natural heat source - a forest fire, a wildfire or volcanic activity - and made at least partly of water drops.",
+      "genera": [
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "homogenitus",
+      "abbr": "hogen",
+      "definition": "Clouds plainly seen to have been made by human activity; they are named with the fitting genus followed by homogenitus. An aircraft contrail that lasts 10 minutes or more is called Cirrus homogenitus.",
+      "genera": [
+        "Ci",
+        "Cc",
+        "Cs",
+        "St",
+        "Cu",
+        "Cb"
+      ]
+    },
+    {
+      "name": "homomutatus",
+      "abbr": "homut",
+      "definition": "Long-lasting contrails (Cirrus homogenitus) that strong winds aloft spread over a growing part of the sky, changing inside until they look like natural cirriform cloud.",
+      "genera": [
+        "Ci",
+        "Cc",
+        "Cs"
+      ]
+    },
+    {
+      "name": "silvagenitus",
+      "abbr": "sigen",
+      "definition": "Local clouds over forests, formed from the extra moisture the canopy gives off by evaporation and transpiration.",
+      "genera": [
+        "St"
+      ]
+    },
+    {
+      "name": "cataractagenitus",
+      "abbr": "cagen",
+      "definition": "Local clouds near big waterfalls, formed from the spray the falling water is broken into.",
+      "genera": [
+        "Cu",
+        "St"
+      ]
+    }
+  ],
+  "other_clouds": [
+    {
+      "name": "nacreous",
+      "definition": "Stratospheric clouds looking like Cirrus or lens-shaped Altocumulus that shine with strong mother-of-pearl colours; they are the ice kind of polar stratospheric cloud.",
+      "height_m": [
+        15000,
+        30000
+      ],
+      "notes": "They form in the stratosphere at high latitudes of either hemisphere in winter, colder than the ice frost point (typically about -85 C). The 15000-30000 m range is the Atlas's figure for polar stratospheric clouds in general, about 15 to 30 km, from its page on upper-atmospheric clouds; the page on nacreous clouds gives no height."
+    },
+    {
+      "name": "nitric acid and water polar stratospheric",
+      "definition": "Polar stratospheric clouds with fewer and smaller particles than the ice kind, able to exist up to about 6 C above the ice frost point, made of solid nitric acid hydrates or of liquid droplets of nitric acid and water.",
+      "height_m": [
+        15000,
+        30000
+      ],
+      "notes": "Found only at high latitudes in or near winter. Formation thresholds: nitric acid trihydrate about -78 C, supercooled ternary solution -81 C, ice -85 C. The page gives no height; the 15000-30000 m range is the general one for polar stratospheric clouds from the upper-atmospheric clouds page."
+    },
+    {
+      "name": "noctilucent",
+      "definition": "Mesospheric clouds like thin, wispy Cirrus, usually bluish or silvery, that still catch the sunlight long after summer sunset and so glow against the dark sky.",
+      "height_m": [
+        80000,
+        85000
+      ],
+      "notes": "Also called polar mesospheric clouds. They sit at or near the summer mesopause, about 80-85 km up, are made of very small ice crystals (about 0.3 micrometres across on average) and form only where the mesosphere is colder than about -120 C."
+    }
+  ],
+  "mother_cloud_forms": [
+    {
+      "suffix": "genitus",
+      "meaning": "Applies when part of a cloud grows outward and its extensions - still attached or broken away - turn into cloud of another genus. The new cloud takes its own genus name followed by the mother cloud's name with the suffix genitus, e.g. Cirrus altocumulogenitus."
+    },
+    {
+      "suffix": "mutatus",
+      "meaning": "Applies when all or most of a cloud changes inside so completely that it becomes another genus. The result takes its new genus name followed by the old genus with the suffix mutatus, e.g. Stratus stratocumulomutatus."
+    }
+  ],
+  "code_figures": {
+    "CL": [
+      {
+        "code": "0",
+        "description": "No low (CL) clouds."
+      },
+      {
+        "code": "1",
+        "description": "Fair-weather Cumulus: Cumulus humilis, Cumulus fractus not of bad weather, or both."
+      },
+      {
+        "code": "2",
+        "description": "Cumulus mediocris or congestus, possibly with Cumulus fractus or humilis or with Stratocumulus, all with their bases at one level."
+      },
+      {
+        "code": "3",
+        "description": "Cumulonimbus calvus, alone or with Cumulus, Stratocumulus or Stratus."
+      },
+      {
+        "code": "4",
+        "description": "Stratocumulus formed from spreading Cumulus (cumulogenitus), possibly with Cumulus as well."
+      },
+      {
+        "code": "5",
+        "description": "Stratocumulus that did not form from spreading Cumulus."
+      },
+      {
+        "code": "6",
+        "description": "Stratus nebulosus, Stratus fractus not of bad weather, or both."
+      },
+      {
+        "code": "7",
+        "description": "Bad-weather shreds (pannus) of Stratus fractus, Cumulus fractus or both, usually under Altostratus or Nimbostratus."
+      },
+      {
+        "code": "8",
+        "description": "Cumulus together with Stratocumulus other than cumulogenitus, their bases at different levels."
+      },
+      {
+        "code": "9",
+        "description": "Cumulonimbus capillatus, often with an anvil, alone or with Cumulonimbus calvus, Cumulus, Stratocumulus, Stratus or pannus."
+      },
+      {
+        "code": "/",
+        "description": "Low clouds cannot be seen because of darkness, fog, blowing dust or sand, or something similar."
+      }
+    ],
+    "CM": [
+      {
+        "code": "0",
+        "description": "No middle (CM) clouds."
+      },
+      {
+        "code": "1",
+        "description": "Altostratus translucidus."
+      },
+      {
+        "code": "2",
+        "description": "Altostratus opacus, or Nimbostratus."
+      },
+      {
+        "code": "3",
+        "description": "Altocumulus translucidus in a single layer."
+      },
+      {
+        "code": "4",
+        "description": "Altocumulus translucidus in patches, often lens-shaped, constantly changing, at one or more levels."
+      },
+      {
+        "code": "5",
+        "description": "Altocumulus spreading steadily over the sky and as a rule thickening as a whole: bands of translucidus, or one layer or more of translucidus or opacus."
+      },
+      {
+        "code": "6",
+        "description": "Altocumulus formed from Cumulus (cumulogenitus) or from Cumulonimbus (cumulonimbogenitus)."
+      },
+      {
+        "code": "7",
+        "description": "Altocumulus in two or more layers (duplicatus), or opacus in a single layer, neither spreading steadily over the sky; or Altocumulus together with Altostratus or Nimbostratus."
+      },
+      {
+        "code": "8",
+        "description": "Altocumulus castellanus or floccus."
+      },
+      {
+        "code": "9",
+        "description": "Altocumulus in a chaotic sky, usually at several levels."
+      },
+      {
+        "code": "/",
+        "description": "Middle clouds cannot be seen because of darkness, fog, blowing dust or sand or something similar, or because an unbroken lower layer hides them."
+      }
+    ],
+    "CH": [
+      {
+        "code": "0",
+        "description": "No high (CH) clouds."
+      },
+      {
+        "code": "1",
+        "description": "Cirrus fibratus, sometimes with Cirrus uncinus, not spreading steadily over the sky."
+      },
+      {
+        "code": "2",
+        "description": "Dense Cirrus spissatus in patches or tangled sheaves, usually not increasing and sometimes looking like what is left of a Cumulonimbus top; or Cirrus castellanus or floccus."
+      },
+      {
+        "code": "3",
+        "description": "Cirrus spissatus cumulonimbogenitus."
+      },
+      {
+        "code": "4",
+        "description": "Cirrus uncinus, fibratus or both, spreading steadily over the sky and as a rule thickening as a whole."
+      },
+      {
+        "code": "5",
+        "description": "Cirrostratus, alone or with Cirrus (often in bands), spreading steadily over the sky and usually thickening as a whole; the unbroken veil does not yet reach 45 degrees above the horizon."
+      },
+      {
+        "code": "6",
+        "description": "Cirrostratus, alone or with Cirrus (often in bands), spreading steadily over the sky and usually thickening as a whole; the unbroken veil reaches more than 45 degrees above the horizon but does not cover the whole sky."
+      },
+      {
+        "code": "7",
+        "description": "Cirrostratus over the entire sky."
+      },
+      {
+        "code": "8",
+        "description": "Cirrostratus neither spreading steadily over the sky nor covering all of it."
+      },
+      {
+        "code": "9",
+        "description": "Cirrocumulus on its own, or Cirrocumulus as the main high cloud."
+      },
+      {
+        "code": "/",
+        "description": "High clouds cannot be seen because of darkness, fog, blowing dust or sand or something similar, or because an unbroken lower layer hides them."
+      }
+    ]
+  },
+  "uncertain": [
+    "CROSS-CHECK RESULT (not a gap, recorded for provenance): the per-genus species, varieties, supplementary features and accessory clouds in 'genera' were derived by inverting the Atlas association tables 7, 8, 9 and 10. They were then compared cell by cell against an independent transcription of the per-genus rows of Table 2 (cloud-classification-summary.html). All 40 genus-category cells agree; there are zero disagreements between the two sources.",
+    "Genus symbols: Table 3 (abbr-and-symbols-of-clouds-table-genera-species.html) gives a graphical symbol for each genus as an image. Symbols could not be extracted as text and are omitted.",
+    "Cloud symbols for the CL/CM/CH code figures: Table 14 (cloud-symbols-corresponding-to-codes-cl-cm-ch.html) is image-only, so the symbols are omitted; only the code specification text is captured.",
+    "CL, CM and CH also have the code '/', for clouds that cannot be seen because of darkness, fog, blowing dust or sand or the like (cl-invisible.html). It was first left out because the schema typed 'code' as an integer 0-9; see the last note: the codes are now strings and '/' is included. cm-invisible.html and ch-invisible.html were not fetched.",
+    "First fetch of abbr-and-symbols-of-clouds-table-genera-species.html (Table 3) returned a garbled result that falsely paired each genus row with the species row at the same index (e.g. 'Altostratus - congestus'). Table 3 is in fact two independent lists. Re-fetched with an explicit instruction and the corrected reading (10 genera, 15 species) is used here. No genus-species association is taken from Table 3.",
+    "First fetch of Table 2 (cloud-classification-summary.html) bled the 'Mother-clouds and special clouds' column into the 'Accessory clouds' column, reporting Stratocumulus accessory clouds as 'Altocumulus, Nimbostratus, Stratus'. A column-isolated re-fetch returned Stratocumulus = EMPTY, which agrees with Table 10. Stratocumulus is recorded as having no accessory clouds.",
+    "homogenitus genera: Table 2 marks 'Homo' against Cirrus, Cirrocumulus, Cirrostratus, Stratus, Cumulus and Cumulonimbus, and that list is used. The homogenitus page itself lets the name follow whichever genus fits, without a restriction, so the set may be wider than Table 2 shows.",
+    "flammagenitus, silvagenitus and cataractagenitus genera are taken from Table 2's 'Mother-clouds and special clouds' column (Flamma: Cu, Cb; Silva: St; Cataracta: Cu, St). Their own pages give only examples and say the name follows whichever genus fits, so these lists are the table's values rather than exhaustive limits.",
+    "Special cloud abbreviations (flgen, hogen, homut, sigen, cagen) come from Table 5 (abbr-and-symbols-of-clouds-table-mother-special.html).",
+    "Heights for nacreous, nitric acid/water polar stratospheric and noctilucent clouds are not printed on those clouds' own pages. The values used are from upper-atmospheric-clouds.html, which gives polar stratospheric clouds as about 15 km to 30 km and noctilucent clouds as about 80-85 km. The 15000-30000 m figure therefore applies to polar stratospheric clouds generally, not to nacreous clouds specifically.",
+    "The etage ranges are printed in kilometres and feet only (for example polar high 3-8 km / 10 000-25 000 ft); the metre values here are exact conversions of the kilometre figures, not separately printed metre values.",
+    "The Atlas gives the low etage as reaching from the ground up to 2 km in all three regions; its lower bound is recorded as 0 m.",
+    "The Atlas notes three exceptions to the etage scheme that this schema cannot express: Altostratus frequently extends higher than the middle etage, Nimbostratus usually penetrates into adjacent etages, and Cumulus and Cumulonimbus have bases in the low etage but often reach well into the middle and high etages.",
+    "No page was found giving a dedicated 'principles of cloud classification - etages' URL; the etage table was located at some-useful-concepts-levels.html and is also reproduced as Table 6 on clouds-definitions.html.",
+    "No accessory-cloud association table existed at clouds-accessory-clouds-and-genera-most-frequently-occur-table.html (404). The correct URL is clouds-accessory-and-genera-most-frequently-occur-table.html (Table 10), which was used.",
+    "clouds-mother.html and clouds-mother-clouds.html both 404; the mother-cloud text was taken from principles-of-cloud-classification-mother-clouds.html.",
+    "4 Oct 2026: every definition, description, rule and note in this file has been rewritten in CloudSim's own words, so that the file can be released with the program under GPL-3.0-or-later. The facts are unchanged: they follow the Atlas pages listed in 'sources' (see 'about' for what was also checked against the freely licensed pages in 'references'). Before that date the definitions were transcriptions of the Atlas's wording.",
+    "CROSS-CHECK RESULT (mother clouds): the 53 genus-to-genus transitions were read off each genus's own 'Clouds from which X may form' page, which prints the full Latin form and therefore settles genitus versus mutatus. Inverting them yields exactly 7 genus genitus mothers (Cc, Ac, As, Ns, Sc, Cu, Cb) and 9 genus mutatus mothers (Ci, Cc, Cs, Ac, As, Ns, Sc, St, Cu), which matches Table 5's 21 abbreviations exactly once the 4 special genitus forms and homomutatus are added. There is no cirrogenitus or cirrostratogenitus and no cumulonimbomutatus, consistent with both sources.",
+    "homomutatus genera are now CONFIRMED as Ci, Cc and Cs: cirrocumulus-may-form.html prints Cc homomutatus and cirrostratus-may-form.html prints Cs homomutatus, and homomutatus.html names Cirrus (examples Cirrus floccus homomutatus, Cirrus fibratus homomutatus). This supersedes the earlier note that only Cirrus was confirmed.",
+    "mother_clouds 'meaning' strings: the Atlas gives only the abbreviation and Latin name of each of the 21 forms in Table 5; each meaning here applies the Atlas's definitions of genitus and mutatus to the mother genus, in CloudSim's words.",
+    "mother_clouds.transitions contains genus-to-genus pairings only. Three further Atlas-stated transitions have a non-genus mother and appear in special_clouds instead: contrails (Cirrus homogenitus) into Ci/Cc/Cs homomutatus; and stratus-may-form.html also states that Stratus often forms from the slow lifting of a fog layer, which is a hydrometeor, not a cloud genus, and so is not in the graph.",
+    "Cumulus fractus cumulogenitus (Cu to Cu, genitus) is the only same-genus transition the Atlas prints; it is retained because cumulus-may-form.html states it explicitly for precipitating Cumulus.",
+    "constitution.vertical_extent_m is null for all ten genera: the Atlas gives no bounded vertical extent in metres for any genus. The nearest is Altostratus, said to be hundreds to thousands of metres deep, which is not a usable range; thickness_notes records it. No genus page gives a thickness in metres.",
+    "constitution.phase uses ice/water/mixed as the schema requires, which loses detail the Atlas gives: Cc is ice, but strongly supercooled droplets may occur for a while; Ac is always droplets, yet may turn wholly to ice in great cold; St is water but may be small ice particles at low temperature; Cu is mainly water, with ice forming below 0 C, which is the change into Cb. The notes field carries these caveats.",
+    "combination_rules: no Atlas page was found that states the full canonical ORDER of all name components in one place. The order genus, species, variety, supplementary feature, then special or mother-cloud name is stated on the special-cloud pages (flammagenitus.html, silvagenitus.html, cataractagenitus.html) and is consistent with every printed example, but cloud-abbreviations-and-symbols.html, introduction-and-principles-of-cloud-classification.html and cloud-classification-summary.html were all checked and none prints an ordering rule.",
+    "combination_rules: the Atlas states explicitly that translucidus and opacus are mutually exclusive, and that perlucidus may combine with either. No other pairwise variety exclusions are stated, and no page states whether a cloud may carry more than one supplementary feature or accessory cloud at once (principles-of-cloud-classification-supplementary-features.html and principles-of-cloud-classification-accessory-clouds.html were both checked and are silent).",
+    "angular_criteria: the condition that the elements be seen more than 30 degrees above the horizon appears on the comparison pages (cc-compared-with-ac.html, ac-compared-with-sc.html, sc-compared-with-ac.html), NOT in the genus definitions, which give the same 1 / 1-5 / more than 5 degree thresholds with no elevation condition. Both variants are recorded separately so the renderer can see which text each comes from.",
+    "angular_criteria: no finger, hand or ripple size criteria exist in the Atlas. identifying-clouds.html and appearance-of-clouds.html were both checked and state no quantitative or angular criteria at all, and no species page gives a numeric element size. The only numeric element-size criteria in the Atlas are the Cc/Ac/Sc apparent-width family recorded here.",
+    "angular_criteria: explanatory-remarks-cirrocumulus.html and explanatory-remarks-altocumulus.html were checked for element-size rules and contain none; they are qualitative only.",
+    "photometeors.cloud_types is populated only where an Atlas page literally names a cloud genus. Several phenomena (46 degree halo, circumzenithal arc, circumhorizontal arc, supralateral arc, infralateral arc, glory, rainbow, Bishop's ring) name no genus at all, so their cloud_types are empty; the notes field says so in each case. Where a genus comes from a different page than the phenomenon's own page (for example Altocumulus for parhelia and luminous pillars, from physical-constitution-altocumulus.html), the notes field names the source.",
+    "photometeors: the Atlas's photometeor chapter also lists mirage, shimmer, scintillation, green flash and twilight colours. These are not cloud-associated optical phenomena and are omitted. No page for crepuscular rays, anthelion or 120 degree parhelia was found; other-halo-phenomena.html names Parry arc, anthelic arcs (diffuse, Wegener, Hastings, Tricker), tape arcs, helic arc, subhelic arc, Moilanen arc, haloes on pyramidal ice crystals, tangential arcs, parroid arcs and elliptical haloes, but gives definitions for almost none of them, so only the quantitative items were carried into angular_criteria.",
+    "photometeors: parhelia (sun dogs) have no page of their own. They are described on parhelic-circle.html as bright spots occurring most commonly a little outside the 22 degree halo, and are recorded under that entry rather than as a separate phenomenon.",
+    "discriminators: the Atlas's comparison pages are not a symmetric matrix. Some pairings exist in one direction only, several are stated at species or variety level rather than genus level (for example 'As op compared with St neb op', 'Sc flo compared with Cu fra / Cu med'), and one compares a cloud with a lithometeor ('Cs compared with Hz', where Hz is haze). The genus and vs fields reproduce the Atlas's own pairing labels, so some contain species or variety abbreviations. 50 pairings were captured in total (Ci 4, Cc 3, Cs 6, Ac 5, As 6, Ns 5, Sc 7, St 7, Cu 5, Cb 2).",
+    "discriminators: Cumulonimbus has no per-pair sub-pages; its two comparisons (versus Nimbostratus and versus Cumulus congestus) are printed on the hub page differences-between-cumulonimbus-and-similar-genera.html and are recorded from there.",
+    "cloud_amount: the okta code tables for N and Nh are NOT in the International Cloud Atlas. total-cloud-cover-and-cloud-amount.html defines the quantities and gives estimation procedure but states no unit and contains no numbered code table; coding-of-clouds.html and its sub-pages cover only CL, CM and CH. The N and Nh arrays are therefore empty and the Atlas's qualitative statements are given instead. Those code tables live in the WMO Manual on Codes (WMO-No. 306), outside the Atlas.",
+    "code_figures: every 'code' value is now a string so that the '/' value can be included. The CL wording differs slightly from CM and CH: CL omits the clause 'or because of a continuous layer of lower clouds'."
+  ],
+  "mother_clouds": {
+    "genitus": [
+      {
+        "abbr": "ccgen",
+        "mother": "Cc",
+        "meaning": "Cirrocumulogenitus: formed where part of a Cirrocumulus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "acgen",
+        "mother": "Ac",
+        "meaning": "Altocumulogenitus: formed where part of an Altocumulus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "asgen",
+        "mother": "As",
+        "meaning": "Altostratogenitus: formed where part of an Altostratus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "nsgen",
+        "mother": "Ns",
+        "meaning": "Nimbostratogenitus: formed where part of a Nimbostratus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "scgen",
+        "mother": "Sc",
+        "meaning": "Stratocumulogenitus: formed where part of a Stratocumulus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "cugen",
+        "mother": "Cu",
+        "meaning": "Cumulogenitus: formed where part of a Cumulus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "cbgen",
+        "mother": "Cb",
+        "meaning": "Cumulonimbogenitus: formed where part of a Cumulonimbus grew outward and became cloud of another genus."
+      },
+      {
+        "abbr": "flgen",
+        "mother": null,
+        "meaning": "Flammagenitus: made by a local natural heat source such as a forest fire, a wildfire or a volcano; its origin is heat, not another cloud."
+      },
+      {
+        "abbr": "hogen",
+        "mother": null,
+        "meaning": "Homogenitus: made by human activity; its origin is that activity, not another cloud."
+      },
+      {
+        "abbr": "sigen",
+        "mother": null,
+        "meaning": "Silvagenitus: formed locally over a forest from the moisture its canopy gives off by evaporation and transpiration; its origin is the forest, not another cloud."
+      },
+      {
+        "abbr": "cagen",
+        "mother": null,
+        "meaning": "Cataractagenitus: formed locally near a large waterfall from its spray; its origin is the waterfall, not another cloud."
+      }
+    ],
+    "mutatus": [
+      {
+        "abbr": "cimut",
+        "mother": "Ci",
+        "meaning": "Cirromutatus: formed when all or most of a Cirrus changed inside into another genus."
+      },
+      {
+        "abbr": "ccmut",
+        "mother": "Cc",
+        "meaning": "Cirrocumulomutatus: formed when all or most of a Cirrocumulus changed inside into another genus."
+      },
+      {
+        "abbr": "csmut",
+        "mother": "Cs",
+        "meaning": "Cirrostratomutatus: formed when all or most of a Cirrostratus changed inside into another genus."
+      },
+      {
+        "abbr": "acmut",
+        "mother": "Ac",
+        "meaning": "Altocumulomutatus: formed when all or most of an Altocumulus changed inside into another genus."
+      },
+      {
+        "abbr": "asmut",
+        "mother": "As",
+        "meaning": "Altostratomutatus: formed when all or most of an Altostratus changed inside into another genus."
+      },
+      {
+        "abbr": "nsmut",
+        "mother": "Ns",
+        "meaning": "Nimbostratomutatus: formed when all or most of a Nimbostratus changed inside into another genus."
+      },
+      {
+        "abbr": "scmut",
+        "mother": "Sc",
+        "meaning": "Stratocumulomutatus: formed when all or most of a Stratocumulus changed inside into another genus."
+      },
+      {
+        "abbr": "stmut",
+        "mother": "St",
+        "meaning": "Stratomutatus: formed when all or most of a Stratus changed inside into another genus."
+      },
+      {
+        "abbr": "cumut",
+        "mother": "Cu",
+        "meaning": "Cumulomutatus: formed when all or most of a Cumulus changed inside into another genus."
+      },
+      {
+        "abbr": "homut",
+        "mother": null,
+        "meaning": "Homomutatus: long-lasting contrails (Cirrus homogenitus) have spread and changed inside until they look like natural cirriform cloud; its origin is a man-made trail, not a natural cloud."
+      }
+    ],
+    "transitions": [
+      {
+        "from": "Cc",
+        "to": "Ci",
+        "form": "genitus",
+        "atlas_form_name": "Ci cirrocumulogenitus (from virga)"
+      },
+      {
+        "from": "Ac",
+        "to": "Ci",
+        "form": "genitus",
+        "atlas_form_name": "Ci altocumulogenitus (from virga)"
+      },
+      {
+        "from": "Cb",
+        "to": "Ci",
+        "form": "genitus",
+        "atlas_form_name": "Ci cumulonimbogenitus (from the upper part of a Cumulonimbus)"
+      },
+      {
+        "from": "Cs",
+        "to": "Ci",
+        "form": "mutatus",
+        "atlas_form_name": "Ci cirrostratomutatus (selective evaporation of Cirrostratus)"
+      },
+      {
+        "from": "Ci",
+        "to": "Cc",
+        "form": "mutatus",
+        "atlas_form_name": "Cc cirromutatus (transformation of Cirrus)"
+      },
+      {
+        "from": "Cs",
+        "to": "Cc",
+        "form": "mutatus",
+        "atlas_form_name": "Cc cirrostratomutatus (transformation of Cirrostratus)"
+      },
+      {
+        "from": "Ac",
+        "to": "Cc",
+        "form": "mutatus",
+        "atlas_form_name": "Cc altocumulomutatus (decrease in size of Altocumulus elements)"
+      },
+      {
+        "from": "Ci",
+        "to": "Cs",
+        "form": "mutatus",
+        "atlas_form_name": "Cs cirromutatus (merging of Cirrus elements)"
+      },
+      {
+        "from": "Cc",
+        "to": "Cs",
+        "form": "mutatus",
+        "atlas_form_name": "Cs cirrocumulomutatus (merging of Cirrocumulus elements)"
+      },
+      {
+        "from": "Cc",
+        "to": "Cs",
+        "form": "genitus",
+        "atlas_form_name": "Cs cirrocumulogenitus (ice crystals falling from Cirrocumulus)"
+      },
+      {
+        "from": "As",
+        "to": "Cs",
+        "form": "mutatus",
+        "atlas_form_name": "Cs altostratomutatus (thinning of Altostratus)"
+      },
+      {
+        "from": "Cb",
+        "to": "Cs",
+        "form": "genitus",
+        "atlas_form_name": "Cs cumulonimbogenitus (spreading out of a Cumulonimbus anvil)"
+      },
+      {
+        "from": "Cc",
+        "to": "Ac",
+        "form": "mutatus",
+        "atlas_form_name": "Ac cirrocumulomutatus (increase in size or thickening of elements)"
+      },
+      {
+        "from": "Sc",
+        "to": "Ac",
+        "form": "mutatus",
+        "atlas_form_name": "Ac stratocumulomutatus (subdivision of a layer)"
+      },
+      {
+        "from": "As",
+        "to": "Ac",
+        "form": "mutatus",
+        "atlas_form_name": "Ac altostratomutatus"
+      },
+      {
+        "from": "Ns",
+        "to": "Ac",
+        "form": "mutatus",
+        "atlas_form_name": "Ac nimbostratomutatus"
+      },
+      {
+        "from": "Cu",
+        "to": "Ac",
+        "form": "genitus",
+        "atlas_form_name": "Ac cumulogenitus (spreading of Cumulus tops at a middle-level stable layer)"
+      },
+      {
+        "from": "Cb",
+        "to": "Ac",
+        "form": "genitus",
+        "atlas_form_name": "Ac cumulonimbogenitus (on or near the sides of a Cumulonimbus)"
+      },
+      {
+        "from": "Cs",
+        "to": "As",
+        "form": "mutatus",
+        "atlas_form_name": "As cirrostratomutatus (thickening of a Cirrostratus veil)"
+      },
+      {
+        "from": "Ns",
+        "to": "As",
+        "form": "mutatus",
+        "atlas_form_name": "As nimbostratomutatus (thinning of a Nimbostratus layer)"
+      },
+      {
+        "from": "Ac",
+        "to": "As",
+        "form": "genitus",
+        "atlas_form_name": "As altocumulogenitus (widespread ice crystal virga falling from Altocumulus)"
+      },
+      {
+        "from": "Cb",
+        "to": "As",
+        "form": "genitus",
+        "atlas_form_name": "As cumulonimbogenitus (spreading of the middle or upper part of a Cumulonimbus)"
+      },
+      {
+        "from": "As",
+        "to": "Ns",
+        "form": "mutatus",
+        "atlas_form_name": "Ns altostratomutatus (thickening Altostratus; the usual route)"
+      },
+      {
+        "from": "Sc",
+        "to": "Ns",
+        "form": "mutatus",
+        "atlas_form_name": "Ns stratocumulomutatus (rarely, thickening of a Stratocumulus layer)"
+      },
+      {
+        "from": "Ac",
+        "to": "Ns",
+        "form": "mutatus",
+        "atlas_form_name": "Ns altocumulomutatus (rarely, thickening of an Altocumulus layer)"
+      },
+      {
+        "from": "Cb",
+        "to": "Ns",
+        "form": "genitus",
+        "atlas_form_name": "Ns cumulonimbogenitus (spreading out of Cumulonimbus)"
+      },
+      {
+        "from": "Cu",
+        "to": "Ns",
+        "form": "genitus",
+        "atlas_form_name": "Ns cumulogenitus (very rarely, spreading out of raining Cumulus congestus)"
+      },
+      {
+        "from": "Ac",
+        "to": "Sc",
+        "form": "mutatus",
+        "atlas_form_name": "Sc altocumulomutatus (growth in size of Altocumulus elements)"
+      },
+      {
+        "from": "As",
+        "to": "Sc",
+        "form": "genitus",
+        "atlas_form_name": "Sc altostratogenitus"
+      },
+      {
+        "from": "Ns",
+        "to": "Sc",
+        "form": "genitus",
+        "atlas_form_name": "Sc nimbostratogenitus"
+      },
+      {
+        "from": "Ns",
+        "to": "Sc",
+        "form": "mutatus",
+        "atlas_form_name": "Sc nimbostratomutatus (thinning of Nimbostratus)"
+      },
+      {
+        "from": "St",
+        "to": "Sc",
+        "form": "mutatus",
+        "atlas_form_name": "Sc stratomutatus (lifting of a Stratus layer)"
+      },
+      {
+        "from": "Cu",
+        "to": "Sc",
+        "form": "genitus",
+        "atlas_form_name": "Sc cumulogenitus (spreading out of Cumulus)"
+      },
+      {
+        "from": "Cb",
+        "to": "Sc",
+        "form": "genitus",
+        "atlas_form_name": "Sc cumulonimbogenitus (used, not cumulogenitus, when the parent is Cumulonimbus)"
+      },
+      {
+        "from": "Sc",
+        "to": "St",
+        "form": "mutatus",
+        "atlas_form_name": "St stratocumulomutatus (Stratocumulus thickens and lowers)"
+      },
+      {
+        "from": "As",
+        "to": "St",
+        "form": "genitus",
+        "atlas_form_name": "St fractus altostratogenitus"
+      },
+      {
+        "from": "Ns",
+        "to": "St",
+        "form": "genitus",
+        "atlas_form_name": "St fractus nimbostratogenitus"
+      },
+      {
+        "from": "Cb",
+        "to": "St",
+        "form": "genitus",
+        "atlas_form_name": "St fractus cumulonimbogenitus"
+      },
+      {
+        "from": "Cu",
+        "to": "St",
+        "form": "genitus",
+        "atlas_form_name": "St fractus cumulogenitus (from precipitating Cumulus)"
+      },
+      {
+        "from": "Ac",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu congestus altocumulogenitus (from Altocumulus castellanus)"
+      },
+      {
+        "from": "Sc",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu congestus stratocumulogenitus (from Stratocumulus castellanus)"
+      },
+      {
+        "from": "As",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu fractus altostratogenitus"
+      },
+      {
+        "from": "Ns",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu fractus nimbostratogenitus"
+      },
+      {
+        "from": "Cb",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu fractus cumulonimbogenitus"
+      },
+      {
+        "from": "Cu",
+        "to": "Cu",
+        "form": "genitus",
+        "atlas_form_name": "Cu fractus cumulogenitus (from precipitating Cumulus; the only same-genus pairing in the Atlas)"
+      },
+      {
+        "from": "Sc",
+        "to": "Cu",
+        "form": "mutatus",
+        "atlas_form_name": "Cu stratocumulomutatus"
+      },
+      {
+        "from": "St",
+        "to": "Cu",
+        "form": "mutatus",
+        "atlas_form_name": "Cu stratomutatus (common over land in the morning)"
+      },
+      {
+        "from": "Cu",
+        "to": "Cb",
+        "form": "genitus",
+        "atlas_form_name": "Cb cumulogenitus (from Cumulus congestus; the usual route)"
+      },
+      {
+        "from": "Cu",
+        "to": "Cb",
+        "form": "mutatus",
+        "atlas_form_name": "Cb cumulomutatus"
+      },
+      {
+        "from": "Ac",
+        "to": "Cb",
+        "form": "genitus",
+        "atlas_form_name": "Cb altocumulogenitus (from Altocumulus castellanus; base unusually high)"
+      },
+      {
+        "from": "Sc",
+        "to": "Cb",
+        "form": "genitus",
+        "atlas_form_name": "Cb stratocumulogenitus (from Stratocumulus castellanus)"
+      },
+      {
+        "from": "As",
+        "to": "Cb",
+        "form": "genitus",
+        "atlas_form_name": "Cb altostratogenitus"
+      },
+      {
+        "from": "Ns",
+        "to": "Cb",
+        "form": "genitus",
+        "atlas_form_name": "Cb nimbostratogenitus"
+      }
+    ]
+  },
+  "constitution": [
+    {
+      "genus": "Ci",
+      "phase": "ice",
+      "notes": "Practically all ice crystals. The crystals are mostly tiny and few in a given volume, which is why Cirrus is see-through; in denser patches larger crystals fall fast enough to leave trails that wind shear bends.",
+      "vertical_extent_m": null,
+      "thickness_notes": "The Atlas gives no thickness in metres; it notes only that fall trails reaching a long way down hang from Cirrus bases."
+    },
+    {
+      "genus": "Cc",
+      "phase": "ice",
+      "notes": "Almost entirely ice. Strongly supercooled droplets can be present for a while but are normally soon replaced by ice crystals.",
+      "vertical_extent_m": null,
+      "thickness_notes": "The Atlas says nothing about its thickness or depth."
+    },
+    {
+      "genus": "Cs",
+      "phase": "ice",
+      "notes": "Mostly small ice crystals, thinly spread - hence its transparency: the Sun's disc stays visible unless the Sun is low. Larger crystals can fall fast enough to stream out into filaments that make the veil look fibrous. Thin Cirrostratus frequently shows halos.",
+      "vertical_extent_m": null,
+      "thickness_notes": "Only qualitative: of moderate depth, and at times so thin that a halo is all that betrays it. No figure in metres."
+    },
+    {
+      "genus": "Ac",
+      "phase": "water",
+      "notes": "Water droplets, as the rather low transparency of its elements and their crisp edges (where they are separate) show. In great cold ice crystals can appear, and once the droplets have evaporated the whole cloud is ice and its elements lose their sharp edges. Castellanus and floccus glaciate most often.",
+      "vertical_extent_m": null,
+      "thickness_notes": "No thickness in metres. Coronas or iridescence are common where it is thin."
+    },
+    {
+      "genus": "As",
+      "phase": "mixed",
+      "notes": "A mix of droplets and ice. Fully developed it has three tiers: ice crystals (wholly or mostly) on top; in the middle, ice crystals, snow crystals or flakes mixed with supercooled droplets; at the base, mainly water droplets or drops, ordinary or supercooled. The base holds so many particles that the Sun or Moon always looks blurred and no halo reaches an observer on the ground.",
+      "vertical_extent_m": null,
+      "thickness_notes": "Only orders of magnitude: tens to hundreds of kilometres across and hundreds to thousands of metres deep. No bounded range."
+    },
+    {
+      "genus": "Ns",
+      "phase": "mixed",
+      "notes": "Water droplets (at times supercooled) and raindrops, or snow crystals and flakes, or a mixture of liquid and solid particles. So many particles through so great a depth that direct sunlight never shows through.",
+      "vertical_extent_m": null,
+      "thickness_notes": "Very deep, but no figure in metres."
+    },
+    {
+      "genus": "Sc",
+      "phase": "water",
+      "notes": "Water droplets, sometimes with raindrops and, less often, snow pellets, snow crystals and flakes. Ice crystals, if any, are normally too few to make it look fibrous. In extreme cold it can shed plentiful ice-crystal virga with halos.",
+      "vertical_extent_m": null,
+      "thickness_notes": "No thickness in metres. Where it is not very thick it may show a corona or iridescence."
+    },
+    {
+      "genus": "St",
+      "phase": "water",
+      "notes": "Normally small water droplets. In the cold it can be small ice particles instead, usually a thin cloud that very occasionally shows halos. Dense or deep Stratus often holds drizzle drops and sometimes snow or snow grains.",
+      "vertical_extent_m": null,
+      "thickness_notes": "No thickness in metres. Optically thin Stratus (mostly translucidus) looks smoky grey like fog when seen more than 90 degrees away from the Sun."
+    },
+    {
+      "genus": "Cu",
+      "phase": "water",
+      "notes": "Mostly water droplets. Where it is colder than 0 C ice can form and grow while the supercooled droplets evaporate - the change that turns Cumulus into Cumulonimbus. If the whole cloud is far below 0 C, the same process instead dissolves it into vague trails of snow.",
+      "vertical_extent_m": null,
+      "thickness_notes": "No thickness in metres. Deep Cumulus can shower rain, snow or snow pellets."
+    },
+    {
+      "genus": "Cb",
+      "phase": "mixed",
+      "notes": "Droplets throughout and ice crystals, above all near the top; it also carries big raindrops, and snowflakes, snow pellets or hailstones are frequent too. Droplets and raindrops can be strongly supercooled.",
+      "vertical_extent_m": null,
+      "thickness_notes": "Its constitution section gives no thickness or depth."
+    }
+  ],
+  "combination_rules": [
+    "There are ten genera, the main groups of the classification, and any cloud observed belongs to exactly one of them. (principles-of-cloud-classification-genera.html)",
+    "An identified cloud can carry at most one species name. (principles-of-cloud-classification-species.html)",
+    "Most genera divide into species according to the clouds' shape or inner structure. (principles-of-cloud-classification-species.html)",
+    "One variety can belong to several genera, and a cloud can show several varieties at once; then every variety seen goes into its name. (principles-of-cloud-classification-varieties.html)",
+    "The one exception: translucidus and opacus exclude each other. (clouds-varieties.html)",
+    "Perlucidus can be combined with translucidus or with opacus. (clouds-varieties-perlucidus.html)",
+    "Varieties describe how the visible elements are arranged and how transparent the cloud is. (clouds-varieties.html)",
+    "Name order for a special cloud: the genus, then any species, variety and supplementary feature, and the special cloud name last - e.g. Cumulus congestus flammagenitus, Cumulus mediocris homogenitus, Cirrus floccus homomutatus, Stratus silvagenitus. (flammagenitus.html, silvagenitus.html, cataractagenitus.html)",
+    "Naming with genitus: the new cloud's own genus comes first, then the mother cloud's genus joined to genitus - e.g. Cirrus altocumulogenitus. (principles-of-cloud-classification-mother-clouds.html)",
+    "Naming with mutatus: the new genus comes first, then the former genus joined to mutatus - e.g. Stratus stratocumulomutatus. (principles-of-cloud-classification-mother-clouds.html)",
+    "A species (and a variety) can stand with a mother-cloud suffix in one name, e.g. Stratus fractus altostratogenitus, Cumulus congestus altocumulogenitus. (stratus-may-form.html, cumulus-may-form.html)",
+    "Stratocumulus that forms with a Cumulonimbus is called cumulonimbogenitus, not cumulogenitus. (stratocumulus-may-form.html)",
+    "Cumulonimbus or Cumulus congestus? It is Cumulonimbus once any part of the top loses its sharp outline or turns fibrous or striated; where the look is ambiguous, lightning, thunder or hail decide for Cumulonimbus. (differences-between-cumulonimbus-and-similar-genera.html)",
+    "Nimbostratus or Cumulonimbus? Overhead, a cloud that looks like Nimbostratus but brings lightning, thunder or hail is Cumulonimbus. (ns-compared-with-cb.html)",
+    "Stratocumulus floccus or Cumulus? When in doubt, choose the matching Cumulus species. (sc-flo-compared-with-cu-fra-cu-med.html, cu-med-fra-compared-with-sc-flo.html)",
+    "Cirrocumulus: a patch of small elements that are not fully formed is not Cirrocumulus; in doubt, call a cloud Cirrocumulus only if it grew out of, or is plainly linked to, Cirrus or Cirrostratus. (explanatory-remarks-cirrocumulus.html)",
+    "Altocumulus stays Altocumulus while it trails fibrous ice-crystal virga, as long as some part of the cloud is neither fibrous nor silky. (ac-compared-with-ci.html)",
+    "Cumulus stays Cumulus when its tops spread out in layers or push into Altocumulus or Stratocumulus already there, as long as the clouds stay apart or keep marked vertical growth. (cu-compared-with-ac-sc.html)",
+    "A contrail becomes Cirrus homogenitus only after lasting at least 10 minutes; young trails change too fast to be given a species, variety or supplementary feature. (aircraft-condensation-trails.html)"
+  ],
+  "etage_exceptions": [
+    {
+      "genus": "As",
+      "note": "Altostratus sits mostly in the middle level but often reaches above it."
+    },
+    {
+      "genus": "Ns",
+      "note": "Nimbostratus belongs to the middle level but usually spreads into the levels above and below."
+    },
+    {
+      "genus": "Cu",
+      "note": "Cumulus and Cumulonimbus have low bases but often grow so tall that their tops enter the middle and high levels."
+    },
+    {
+      "genus": "Cb",
+      "note": "Cumulus and Cumulonimbus have low bases but often grow so tall that their tops enter the middle and high levels."
+    }
+  ],
+  "angular_criteria": [
+    {
+      "rule": "Most elements look narrower than 1 degree.",
+      "genus": "Cc",
+      "min_deg": null,
+      "max_deg": 1.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/clouds-genera-cirrocumulus.html"
+    },
+    {
+      "rule": "Most elements are very small - under 1 degree wide when seen more than 30 degrees above the horizon; this separates Cirrocumulus from Altocumulus.",
+      "genus": "Cc",
+      "min_deg": null,
+      "max_deg": 1.0,
+      "observed_elevation_deg": 30,
+      "source_url": "https://cloudatlas.wmo.int/en/cc-compared-with-ac.html"
+    },
+    {
+      "rule": "Where small elements are regularly arranged, most usually look 1 to 5 degrees wide.",
+      "genus": "Ac",
+      "min_deg": 1.0,
+      "max_deg": 5.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/clouds-genera-altocumulus.html"
+    },
+    {
+      "rule": "Seen more than 30 degrees above the horizon, most regularly arranged elements look 1 to 5 degrees wide; this separates Altocumulus from Stratocumulus.",
+      "genus": "Ac",
+      "min_deg": 1.0,
+      "max_deg": 5.0,
+      "observed_elevation_deg": 30,
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-sc.html"
+    },
+    {
+      "rule": "Shading makes a cloud Altocumulus rather than Cirrocumulus even if most regular elements are under 1 degree wide; so do elements mostly 1 to 5 degrees wide, even with no shading. Shading wins over size.",
+      "genus": "Ac",
+      "min_deg": 1.0,
+      "max_deg": 5.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-cc.html"
+    },
+    {
+      "rule": "Where small elements are regularly arranged, most look wider than 5 degrees.",
+      "genus": "Sc",
+      "min_deg": 5.0,
+      "max_deg": null,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/clouds-genera-stratocumulus.html"
+    },
+    {
+      "rule": "Seen more than 30 degrees above the horizon, most regularly arranged elements look wider than 5 degrees; this separates Stratocumulus from Altocumulus.",
+      "genus": "Sc",
+      "min_deg": 5.0,
+      "max_deg": null,
+      "observed_elevation_deg": 30,
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-ac.html"
+    },
+    {
+      "rule": "Within 45 degrees of the Sun both Cirrostratus and very thin Stratus can look white, so there colour cannot tell them apart.",
+      "genus": "Cs",
+      "min_deg": null,
+      "max_deg": 45.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-st.html"
+    },
+    {
+      "rule": "Optically thin Stratus, mostly translucidus, looks smoky grey like fog when seen more than 90 degrees from the Sun.",
+      "genus": "St",
+      "min_deg": 90.0,
+      "max_deg": null,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/physical-constitution-stratus.html"
+    },
+    {
+      "rule": "The small halo: a white or mostly white bright ring of 22 degrees radius centred on the Sun or Moon.",
+      "genus": null,
+      "min_deg": 22.0,
+      "max_deg": 22.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/22-halo.html"
+    },
+    {
+      "rule": "The 46 degree halo: a ring of 46 degrees radius, far rarer than the 22 degree halo and always fainter.",
+      "genus": null,
+      "min_deg": 46.0,
+      "max_deg": 46.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/46-halo.html"
+    },
+    {
+      "rule": "A corona: one or more series of small coloured rings around the Sun or Moon; the inner series is usually 5 degrees or less across, and the whole corona can reach 15 degrees across.",
+      "genus": null,
+      "min_deg": 5.0,
+      "max_deg": 15.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/corona.html"
+    },
+    {
+      "rule": "Iridescence: within about 10 degrees of the Sun its colours come mainly from diffraction, farther out mainly from interference; they can appear more than 40 degrees from the Sun.",
+      "genus": null,
+      "min_deg": 10.0,
+      "max_deg": 40.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/irisation-or-iridescence.html"
+    },
+    {
+      "rule": "Bishop's ring: its inner edge is usually 22 to 28 degrees from the Sun and the ring is 10 degrees or more wide; very fine volcanic dust makes it, not cloud.",
+      "genus": null,
+      "min_deg": 22.0,
+      "max_deg": 28.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/bishops-ring.html"
+    },
+    {
+      "rule": "Circumzenithal arc: a coloured half-ring near the zenith, its top about 48 degrees above the Sun. It forms only while the light source is below 32 degrees, meets the 46 degree halo when the Sun is about 22 degrees up, and is best seen with the Sun 15 to 25 degrees up.",
+      "genus": null,
+      "min_deg": 48.0,
+      "max_deg": 48.0,
+      "observed_elevation_deg": 32,
+      "source_url": "https://cloudatlas.wmo.int/en/circumzenithal-arc.html"
+    },
+    {
+      "rule": "Circumhorizontal arc: it needs the Sun higher than 58 degrees and is strongest near 68 degrees, where it touches the bottom of the 46 degree halo; it cannot be seen poleward of latitude 55 degrees.",
+      "genus": null,
+      "min_deg": null,
+      "max_deg": null,
+      "observed_elevation_deg": 58,
+      "source_url": "https://cloudatlas.wmo.int/en/circumhorizontal-arc.html"
+    },
+    {
+      "rule": "Tangent arcs touch the 22 degree or 46 degree halo from outside at its top or bottom. With the light source 32 degrees up, the upper and lower arcs join into a circumscribed halo, which above 50 degrees becomes round and merges with the 22 degree halo.",
+      "genus": null,
+      "min_deg": null,
+      "max_deg": null,
+      "observed_elevation_deg": 32,
+      "source_url": "https://cloudatlas.wmo.int/en/tangent-arc.html"
+    },
+    {
+      "rule": "Supralateral arc: a large rainbow-coloured arc that forms only with the light source below 32 degrees; it always lies higher than the parhelic circle, its top near or touching the circumzenithal arc.",
+      "genus": null,
+      "min_deg": null,
+      "max_deg": null,
+      "observed_elevation_deg": 32,
+      "source_url": "https://cloudatlas.wmo.int/en/supralateral-arc.html"
+    },
+    {
+      "rule": "Infralateral arcs: two seldom-seen coloured arcs that touch the 46 degree halo from outside and always lie below the parhelic circle; with the Sun 68 degrees up they touch that halo right under the Sun.",
+      "genus": null,
+      "min_deg": 46.0,
+      "max_deg": 46.0,
+      "observed_elevation_deg": 68,
+      "source_url": "https://cloudatlas.wmo.int/en/infralateral-arc.html"
+    },
+    {
+      "rule": "Parhelic circle: a white horizontal ring at the Sun's own elevation; bright spots on it most often lie just outside the 22 degree halo (parhelia, often vividly coloured).",
+      "genus": null,
+      "min_deg": 22.0,
+      "max_deg": null,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/parhelic-circle.html"
+    },
+    {
+      "rule": "Pyramidal ice crystals make halos with radii of 9, 18, 20, 23, 24 and 35 degrees.",
+      "genus": null,
+      "min_deg": 9.0,
+      "max_deg": 35.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/other-halo-phenomena.html"
+    },
+    {
+      "rule": "Tape arcs are also known as 46 degree Parry arcs.",
+      "genus": null,
+      "min_deg": 46.0,
+      "max_deg": 46.0,
+      "observed_elevation_deg": null,
+      "source_url": "https://cloudatlas.wmo.int/en/other-halo-phenomena.html"
+    }
+  ],
+  "photometeors": [
+    {
+      "name": "halo phenomena (general)",
+      "cloud_types": [
+        "Cs",
+        "Ci",
+        "Ac",
+        "Sc",
+        "St"
+      ],
+      "definition": "Rings, arcs, pillars or bright spots made when ice crystals floating in the air refract or reflect light; seen in cirriform cloud and in diamond dust.",
+      "angular_radius_deg": null,
+      "notes": "Which genera, from the Atlas's genus and comparison pages: Cirrostratus regularly gives halos, often many kinds and usually full rings; Cirrus at most part of a circular halo; Altocumulus now and then parhelia or light pillars; Stratocumulus only with ice-crystal virga in extreme cold; Stratus rarely, when made of small ice particles. An observer on the ground never sees a halo in Altostratus, and Cirrocumulus gives none."
+    },
+    {
+      "name": "halo of 22 degrees",
+      "cloud_types": [
+        "Cs"
+      ],
+      "definition": "The small halo: a white or mostly white bright ring of 22 degrees radius around the Sun or Moon.",
+      "angular_radius_deg": 22.0,
+      "notes": "Tied to cirriform cloud; the only genus the page names is Cirrostratus, in a picture caption."
+    },
+    {
+      "name": "halo of 46 degrees",
+      "cloud_types": [],
+      "definition": "A round halo of 46 degrees radius, seen now and then; much rarer and always fainter than the 22 degree halo, and easily mistaken for the supralateral arc.",
+      "angular_radius_deg": 46.0,
+      "notes": "No genus is named on the page."
+    },
+    {
+      "name": "luminous pillar (light pillar)",
+      "cloud_types": [
+        "Ac"
+      ],
+      "definition": "A vertical white shaft of light, continuous or broken, extending upward and downward from the Sun, the Moon or another bright light.",
+      "angular_radius_deg": null,
+      "notes": "The page puts it down to ice crystals - in ice cloud, in freezing fog, or as diamond dust - without naming a genus; Altocumulus is listed because the Altocumulus constitution page says parhelia or light pillars are sometimes seen in it."
+    },
+    {
+      "name": "tangent arc",
+      "cloud_types": [
+        "Ci"
+      ],
+      "definition": "A collective name for bright arcs that touch other halos, lying outside the 22 or 46 degree halo at its top or bottom.",
+      "angular_radius_deg": null,
+      "notes": "The page names Cirrus (deep layers seen from aircraft) and diamond dust."
+    },
+    {
+      "name": "circumzenithal arc",
+      "cloud_types": [],
+      "definition": "A coloured half-ring near the zenith, its top about 48 degrees above the Sun; red along its lower, outer edge and violet along its upper, inner edge.",
+      "angular_radius_deg": 48.0,
+      "notes": "Made by plate-shaped ice crystals lying flat - the same crystals that make parhelia. No genus is named on the page."
+    },
+    {
+      "name": "circumhorizontal arc",
+      "cloud_types": [],
+      "definition": "An arc running parallel to the horizon, low in the sky.",
+      "angular_radius_deg": null,
+      "notes": "No genus is named on the page."
+    },
+    {
+      "name": "parhelic circle",
+      "cloud_types": [
+        "Ac"
+      ],
+      "definition": "A white horizontal ring at the Sun's elevation; bright spots on it, most often just beyond the 22 degree halo, are parhelia, frequently vividly coloured.",
+      "angular_radius_deg": null,
+      "notes": "No genus is named on the parhelic circle page; Altocumulus is listed because the Altocumulus constitution page says parhelia or light pillars are sometimes seen in it."
+    },
+    {
+      "name": "subsun (undersun)",
+      "cloud_types": [
+        "Cs"
+      ],
+      "definition": "A brilliant white spot straight below the Sun, like the Sun's reflection on still water, made by sunlight reflected from plate-shaped ice crystals in cloud.",
+      "angular_radius_deg": null,
+      "notes": "The page names Cirrostratus (seen from aircraft) and diamond dust (in winter mountains)."
+    },
+    {
+      "name": "supralateral arc",
+      "cloud_types": [],
+      "definition": "A large rainbow-coloured arc formed only with the light source below 32 degrees; it always lies higher than the parhelic circle, its top near or touching the circumzenithal arc.",
+      "angular_radius_deg": null,
+      "notes": "No genus is named on the page."
+    },
+    {
+      "name": "infralateral arc (lower lateral tangent arc)",
+      "cloud_types": [],
+      "definition": "Two coloured arcs, seldom seen, that touch the 46 degree halo from outside and always lie below the parhelic circle.",
+      "angular_radius_deg": 46.0,
+      "notes": "No genus is named on the page."
+    },
+    {
+      "name": "corona",
+      "cloud_types": [
+        "As",
+        "Cs",
+        "Ac",
+        "Sc",
+        "St"
+      ],
+      "definition": "One or more series (rarely more than three) of small coloured rings around the Sun or Moon, produced by diffraction in mist, fog or thin cloud of very small water drops or ice particles.",
+      "angular_radius_deg": 5.0,
+      "notes": "The inner series is usually 5 degrees or less across; coronae can reach 15 degrees. Genera, from the Atlas's pages: often in thin parts of Altocumulus; sometimes in Stratocumulus that is not very thick; in very thin Stratus; possible in Cirrostratus and in Altostratus. Cirrus is described as showing none."
+    },
+    {
+      "name": "irisation (iridescence)",
+      "cloud_types": [
+        "Cc",
+        "Ac",
+        "Sc"
+      ],
+      "definition": "Colours on clouds, sometimes blended and sometimes in bands roughly following the cloud's edge; most often green and pink, in pastel tones.",
+      "angular_radius_deg": null,
+      "notes": "No genus is named on the iridescence page. Genera, from the Atlas's pages: often in thin parts of Altocumulus; sometimes in Stratocumulus that is not very thick; possible in Cirrocumulus; not in Cirrostratus. Nacreous clouds show it very strongly, and Altocumulus lenticularis sometimes."
+    },
+    {
+      "name": "glory",
+      "cloud_types": [],
+      "definition": "Rings of colour, one series or several, seen around the observer's own shadow where it falls on a cloud of many small droplets, on fog, or in rare cases on dew.",
+      "angular_radius_deg": null,
+      "notes": "Seen from above, from a mountain or an aircraft, on mist, fog or cloud below. The page names no genus and gives no radius."
+    },
+    {
+      "name": "rainbow",
+      "cloud_types": [],
+      "definition": "Concentric coloured arcs, violet to red, formed by sunlight or moonlight on a curtain of water drops - raindrops, drizzle or fog droplets.",
+      "angular_radius_deg": null,
+      "notes": "The rainbow page gives no radius and names no genus. The only genus link found is on sc-compared-with-cu.html, where the usual lack of a rainbow helps tell Stratocumulus from Cumulus - implying rainbows with Cumulus showers; as that is an inference, cloud_types is left empty."
+    },
+    {
+      "name": "Bishop's ring",
+      "cloud_types": [],
+      "definition": "A whitish ring around the Sun or Moon, faintly bluish inside and reddish-brown outside.",
+      "angular_radius_deg": 22.0,
+      "notes": "Its inner edge is usually 22 to 28 degrees out and the ring 10 degrees or more wide. It comes from diffraction by very fine volcanic dust high up, not from cloud."
+    }
+  ],
+  "discriminators": [
+    {
+      "genus": "Ci",
+      "vs": "Cc",
+      "how": "Cirrus is mostly fibrous or silky, with no grains or ripples, no corona, no iridescence and no virga; thick Cirrus can be shaded, Cirrocumulus never.",
+      "source_url": "https://cloudatlas.wmo.int/en/ci-compared-with-cc.html"
+    },
+    {
+      "genus": "Ci",
+      "vs": "Cs",
+      "how": "Cirrus is broken up, or small with narrow continuous parts; it can be dense enough to hide the Sun, whereas Cirrostratus always lets the disc show; it has no waves and no corona, at most part of a circular halo, and spissatus may carry mamma.",
+      "source_url": "https://cloudatlas.wmo.int/en/ci-compared-with-cs.html"
+    },
+    {
+      "genus": "Ci",
+      "vs": "Ac",
+      "how": "Cirrus is fibrous or silky instead of made of plates or rolls; it has no organised elements, no shading (spissatus partly excepted), no waves, no virga and no corona.",
+      "source_url": "https://cloudatlas.wmo.int/en/ci-compared-with-ac.html"
+    },
+    {
+      "genus": "Ci",
+      "vs": "As",
+      "how": "Compared with patches of Altostratus, thick Cirrus is smaller, mostly white, without precipitation or virga and without waves.",
+      "source_url": "https://cloudatlas.wmo.int/en/ci-compared-with-as.html"
+    },
+    {
+      "genus": "Cc",
+      "vs": "Ci",
+      "how": "Cirrocumulus has ripples or grains, and its fibrous, silky or smooth parts together are not the larger part; it may have virga; it is never shaded and gives no halo of any kind, not even part of a ring.",
+      "source_url": "https://cloudatlas.wmo.int/en/cc-compared-with-ci.html"
+    },
+    {
+      "genus": "Cc",
+      "vs": "Cs",
+      "how": "Cirrocumulus has ripples or grains; the Sun's or Moon's disc usually shows through it, though a thicker one reveals only where they are; it can be iridescent but gives no halo, and may have virga or mamma.",
+      "source_url": "https://cloudatlas.wmo.int/en/cc-compared-with-cs.html"
+    },
+    {
+      "genus": "Cc",
+      "vs": "Ac",
+      "how": "In Cirrocumulus most elements are very small, under 1 degree wide when seen more than 30 degrees above the horizon; there is no shading and no halo.",
+      "source_url": "https://cloudatlas.wmo.int/en/cc-compared-with-ac.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "Ci",
+      "how": "Cirrostratus is a veil, usually very wide; as nebulosus it shows no filaments, waves or other detail; it always lets the disc of the Sun or Moon show, gives many halo types (usually full rings), may give a corona, and has no mamma.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-ci.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "Cc",
+      "how": "Cirrostratus lacks very fine grains; it can be partly shaded, shows no iridescence but does show halos, and has neither mamma nor virga.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-cc.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "Ac",
+      "how": "Cirrostratus has no rounded masses or turrets, is never shaded throughout, and shows no iridescence, mamma or virga.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-ac.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "As",
+      "how": "Cirrostratus lets the disc of the Sun or Moon show unless the Sun is low; it is unshaded or partly shaded, usually shows halos, and has no mamma, precipitation or virga.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-as.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "St",
+      "how": "Cirrostratus is whitish throughout, may look fibrous and often shows halos; Stratus gives halos only when made of small ice particles. Within 45 degrees of the Sun both can look white.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-st.html"
+    },
+    {
+      "genus": "Cs",
+      "vs": "Hz (haze)",
+      "how": "Haze looks opalescent or dirty yellow to brown; Cirrostratus is white throughout, greyish only where it is partly shaded.",
+      "source_url": "https://cloudatlas.wmo.int/en/cs-compared-with-hz.html"
+    },
+    {
+      "genus": "Ac",
+      "vs": "Ci",
+      "how": "Altocumulus is not mainly fibrous or silky; its elements are plates, rolls and the like; it can be shaded all over, which Cirrus never is, may show waves or virga, and commonly gives a corona.",
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-ci.html"
+    },
+    {
+      "genus": "Ac",
+      "vs": "Cc",
+      "how": "Shading makes it Altocumulus even when the elements are under 1 degree wide; so do elements 1 to 5 degrees wide even without shading. Altocumulus can show halo phenomena.",
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-cc.html"
+    },
+    {
+      "genus": "Ac",
+      "vs": "As",
+      "how": "Altocumulus has thin plates, rounded masses, rolls and so on; the Sun's or Moon's disc may show through it, whereas Altostratus shows only where they are or hides them; it has no pannus, gives no precipitation, and shows neither halo nor iridescence.",
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-as.html"
+    },
+    {
+      "genus": "Ac",
+      "vs": "Sc",
+      "how": "Seen more than 30 degrees above the horizon, Altocumulus elements are 1 to 5 degrees wide; and it gives no precipitation, while Stratocumulus can give light rain, snow or snow pellets.",
+      "source_url": "https://cloudatlas.wmo.int/en/ac-compared-with-sc.html"
+    },
+    {
+      "genus": "Ac flo",
+      "vs": "Cu",
+      "how": "Altocumulus floccus often trails fibrous virga where Cumulus has a usually flat base, and it is generally smaller than Cumulus.",
+      "source_url": "https://cloudatlas.wmo.int/en/acflo-compared-with-cu.html"
+    },
+    {
+      "genus": "As",
+      "vs": "Ci spi",
+      "how": "Altostratus is more extensive and mainly grey, can give rain, snow or ice pellets, and can show coronae.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-compared-with-ci-spi.html"
+    },
+    {
+      "genus": "As tr",
+      "vs": "Cs",
+      "how": "Under Altostratus translucidus objects on the ground cast no shadows, the Sun looks as if seen through ground glass (blurred edge), and there are no halos.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-tr-compared-with-cs.html"
+    },
+    {
+      "genus": "As",
+      "vs": "Ac / Sc",
+      "how": "Where Altostratus has gaps or breaks it can look like Altocumulus or Stratocumulus, but its appearance is more uniform.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-compared-with-ac-sc.html"
+    },
+    {
+      "genus": "As op",
+      "vs": "Ns",
+      "how": "Altostratus opacus has thinner parts where the Sun is, or could be, faintly seen; it is a lighter grey with a less even base and may have mamma. Precipitation reaching the ground marks Nimbostratus.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-op-compared-with-ns.html"
+    },
+    {
+      "genus": "As tr",
+      "vs": "St",
+      "how": "Through Altostratus translucidus the Sun looks ground-glass blurred; Altostratus is always somewhat shaded and never white, unlike thin Stratus seen toward the Sun.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-tr-compared-with-st.html"
+    },
+    {
+      "genus": "As op",
+      "vs": "St neb op",
+      "how": "Somewhere the Altostratus is thin enough to show where the Sun is; its snow is heavier; rain and ice pellets come only from Altostratus, weak drizzle and snow grains only from Stratus; it may have mamma.",
+      "source_url": "https://cloudatlas.wmo.int/en/as-op-compared-with-st-neb-op.html"
+    },
+    {
+      "genus": "Ns",
+      "vs": "As op",
+      "how": "Nimbostratus is usually darker grey and hides the Sun or Moon everywhere, Altostratus opacus only in its thicker parts; its base is usually lower; it can seem lit from within, which Altostratus never does.",
+      "source_url": "https://cloudatlas.wmo.int/en/ns-compared-with-as-op.html"
+    },
+    {
+      "genus": "Ns",
+      "vs": "Ac str op",
+      "how": "Nimbostratus gives rain, snow or ice pellets, Altocumulus none; and it is featureless with usually no visible base, whereas Altocumulus has clear elements and a definite underside.",
+      "source_url": "https://cloudatlas.wmo.int/en/ns-compared-with-ac-str-op.html"
+    },
+    {
+      "genus": "Ns",
+      "vs": "Sc str op",
+      "how": "Nimbostratus is featureless with usually no visible base, where Stratocumulus has clear elements, joined or separate, and a definite underside; Nimbostratus gives rain, snow or ice pellets, Stratocumulus only occasional light falls.",
+      "source_url": "https://cloudatlas.wmo.int/en/ns-compared-with-sc-str-op.html"
+    },
+    {
+      "genus": "Ns",
+      "vs": "St neb op",
+      "how": "Nimbostratus gives rain, snow or ice pellets, not weak drizzle, snow or snow grains; it usually develops from an Altostratus overcast, while thick Stratus usually forms with no other low or middle cloud about.",
+      "source_url": "https://cloudatlas.wmo.int/en/ns-compared-with-st-neb-op.html"
+    },
+    {
+      "genus": "Ns",
+      "vs": "Cb",
+      "how": "Lightning, thunder or hail from a cloud overhead that looks like Nimbostratus make it Cumulonimbus.",
+      "source_url": "https://cloudatlas.wmo.int/en/ns-compared-with-cb.html"
+    },
+    {
+      "genus": "Sc",
+      "vs": "Cs neb",
+      "how": "Stratocumulus shows at least traces of elements, rounded masses or rolls, and is more opaque than Cirrostratus.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-cs-neb.html"
+    },
+    {
+      "genus": "Sc",
+      "vs": "Ac",
+      "how": "Seen more than 30 degrees above the horizon, Stratocumulus elements are wider than 5 degrees; light rain or snow may fall from it.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-ac.html"
+    },
+    {
+      "genus": "Sc",
+      "vs": "As",
+      "how": "Stratocumulus has a less even base and shows elements, rounded masses or rolls; it is not fibrous except in extreme cold; any rain, snow or snow pellets are very light and occasional.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-as.html"
+    },
+    {
+      "genus": "Sc str op",
+      "vs": "Ns",
+      "how": "Stratocumulus has a less even base with visible elements, rounded masses or rolls, only light and occasional precipitation, possibly asperitas or mamma, and no pannus.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-str-op-compared-with-ns.html"
+    },
+    {
+      "genus": "Sc",
+      "vs": "St",
+      "how": "Stratocumulus has elements (joined or separate), rounded masses or rolls, and usually lacks the torn look of Stratus fractus; what falls from it is light rain, snow or snow pellets, where Stratus gives drizzle, snow or snow grains; and it may have mamma, virga or a corona.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-st.html"
+    },
+    {
+      "genus": "Sc",
+      "vs": "Cu",
+      "how": "Stratocumulus elements usually come grouped in patches with mostly flat tops; it never has the dazzling white sunlit sides of Cumulus and can look shaded; it has no arcus, tuba, pileus, velum or pannus; its precipitation is steady rather than showery, and rainbows are usually absent.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-compared-with-cu.html"
+    },
+    {
+      "genus": "Sc flo",
+      "vs": "Cu fra / Cu med",
+      "how": "The underside of Stratocumulus floccus is usually very ragged, and any partly flat base it has soon goes; its base is unusually high for Cumulus. In doubt, name the matching Cumulus species.",
+      "source_url": "https://cloudatlas.wmo.int/en/sc-flo-compared-with-cu-fra-cu-med.html"
+    },
+    {
+      "genus": "St",
+      "vs": "Ci",
+      "how": "Shreds of Stratus fractus are less white than Cirrus filaments (except toward the Sun), less spread out, and change quickly, while Cirrus changes slowly.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-compared-with-ci.html"
+    },
+    {
+      "genus": "St tr",
+      "vs": "Cs",
+      "how": "Stratus translucidus is not as fully white, except when seen toward the Sun.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-tra-compared-with-cs.html"
+    },
+    {
+      "genus": "St",
+      "vs": "As",
+      "how": "Through Stratus the edge of the Sun stays sharp, so its disc or part of it can be seen; thin Stratus toward the Sun shows no shading, while Altostratus always does; Stratus gives drizzle or snow grains, not rain and ice pellets.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-compared-with-as.html"
+    },
+    {
+      "genus": "St neb op",
+      "vs": "Ns",
+      "how": "Stratus has a sharper and more uniform base and looks dry rather than wet; it gives only weak drizzle, snow or snow grains; it usually forms on its own, while Nimbostratus nearly always follows other clouds.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-neb-op-compared-with-ns.html"
+    },
+    {
+      "genus": "St tr",
+      "vs": "Ns",
+      "how": "Through the thinnest parts of Stratus translucidus the disc of the Sun can be made out; Nimbostratus hides the Sun or Moon everywhere.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-tra-compared-with-ns.html"
+    },
+    {
+      "genus": "St",
+      "vs": "Sc",
+      "how": "Stratus shows no elements, joined or separate.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-compared-with-sc.html"
+    },
+    {
+      "genus": "St fra",
+      "vs": "Cu fra",
+      "how": "Stratus fractus is less white and less dense and grows less vertically, since it comes mainly from turbulence rather than from heating near the ground.",
+      "source_url": "https://cloudatlas.wmo.int/en/st-fra-compared-with-cu-fra.html"
+    },
+    {
+      "genus": "Cu",
+      "vs": "Ac / Sc",
+      "how": "Cumulus is detached and dome-shaped; in the distance, perspective can make Cumulus seem to merge. It remains Cumulus when its tops spread into layers, as long as the clouds stay apart or keep marked vertical growth.",
+      "source_url": "https://cloudatlas.wmo.int/en/cu-compared-with-ac-sc.html"
+    },
+    {
+      "genus": "Cu",
+      "vs": "As / Ns",
+      "how": "Showery precipitation means Cumulus; Altostratus, Nimbostratus and thick Stratocumulus last, while Cumulus does not.",
+      "source_url": "https://cloudatlas.wmo.int/en/cu-compared-with-as-ns.html"
+    },
+    {
+      "genus": "Cu con",
+      "vs": "Cb",
+      "how": "Cumulus congestus keeps sharply outlined swelling tops with no fibrous or striated texture, and brings no lightning, thunder or hail showers.",
+      "source_url": "https://cloudatlas.wmo.int/en/cu-con-compared-with-cb.html"
+    },
+    {
+      "genus": "Cu med / Cu fra",
+      "vs": "Sc flo",
+      "how": "Cumulus has a partly flat base; the underside of Stratocumulus floccus is usually very ragged, and any flat part of it soon vanishes; Cumulus leans strongly downwind; Cumulus fractus changes shape continually and fast.",
+      "source_url": "https://cloudatlas.wmo.int/en/cu-med-fra-compared-with-sc-flo.html"
+    },
+    {
+      "genus": "Cu fra",
+      "vs": "St fra",
+      "how": "Cumulus fractus is usually deeper, whiter and less transparent and may have rounded or domed tops; Stratus fractus is always ragged shreds.",
+      "source_url": "https://cloudatlas.wmo.int/en/cu-fra-compared-with-st-fra.html"
+    },
+    {
+      "genus": "Cb",
+      "vs": "Ns",
+      "how": "Showery precipitation, or lightning, thunder or hail, make it Cumulonimbus.",
+      "source_url": "https://cloudatlas.wmo.int/en/differences-between-cumulonimbus-and-similar-genera.html"
+    },
+    {
+      "genus": "Cb",
+      "vs": "Cu con",
+      "how": "It is Cumulonimbus as soon as part of its top loses its sharp outline or turns fibrous or striated; when unsure, lightning, thunder or hail make it Cumulonimbus.",
+      "source_url": "https://cloudatlas.wmo.int/en/differences-between-cumulonimbus-and-similar-genera.html"
+    }
+  ],
+  "cloud_amount": {
+    "unit": null,
+    "N": [],
+    "Nh": [],
+    "definitions": [
+      "Total cloud cover: the share of the sky hidden by all the clouds that can be seen.",
+      "Cloud amount: the share of the sky covered by a given kind of cloud or combination - a genus, species, variety, layer, or any mix of these.",
+      "Estimate from an open spot with the whole sky in view; where mountains, haze, fog or smoke hide part of it, estimate from the part that can be seen, and count areas veiled by precipitation as cloud.",
+      "With clouds at several levels overlapping, the amounts of the separate kinds can add up to more than the total cover.",
+      "Ignore gaps on the horizon that the observer cannot see.",
+      "On a dark night only the total cover can be judged, from how much of the sky has its stars dimmed or hidden."
+    ],
+    "note": "The Atlas page on total cloud cover and cloud amount defines the two and how to estimate them, but gives no unit (no oktas, eighths or tenths) and no numbered code table. Coded N and Nh live in a different WMO publication, the Manual on Codes (WMO-No. 306), so they are left empty here.",
+    "source_url": "https://cloudatlas.wmo.int/en/total-cloud-cover-and-cloud-amount.html"
+  }
+}
